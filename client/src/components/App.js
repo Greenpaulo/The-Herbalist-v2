@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './Header';
+import Landing from './Landing';
 
 // Dummy components
-const Landing = () => <h2>Landing</h2>
 const Home = () => <h2>Home</h2>
 const Cabinet = () => <h2>Medicine Cabinet!</h2>
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div id="router-container">
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route component={Header} />

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+#router-container {
+  height: 100vh
+}
+
+.pimg1{
+  background-image: url('../images/pimg1.jpeg');
+  height:100%;
+  width:100%;
+}
