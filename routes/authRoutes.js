@@ -8,12 +8,12 @@ module.exports = app => {
   app.get('/auth/google/callback',
     passport.authenticate('google'), (req, res) => {
       // Successful authentication, redirect home.
-      res.redirect('/');
+      res.redirect('/cabinet');
     });
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.redirect('/');
+    res.redirect('/home');
   })
 
   app.get('/api/current_user', (req, res) => {

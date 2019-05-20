@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './Header';
-import Landing from './Landing';
+import Home from './Home';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 // Dummy components
-const Home = () => <h2>Home</h2>
 const Cabinet = () => <h2>Medicine Cabinet!</h2>
+const Materia = () => <h2>Materia Medica!</h2>
 
 class App extends Component {
   componentDidMount() {
@@ -16,16 +16,17 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div id="router-container">
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route component={Header} />
-          </Switch>
-          <Route path='/home' component={Home} />
-          <Route path='/cabinet' component={Cabinet} />
-        </div>
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <div>
+            <Route path='/' component={Header} />
+            <Route exact path='/' component={Home} />
+            <Route path='/cabinet' component={Cabinet} />
+            <Route path='/materia_medica' component={Materia} />
+          </div>
+        </BrowserRouter>
+
+      </div>
     );
   }
 };
