@@ -4,6 +4,8 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 const authRoutes = require('./routes/authRoutes');
+require('./models/Conditions');
+const finderRoutes = require('./routes/finderRoutes');
 require('./models/User');
 require('./services/passport');
 
@@ -30,8 +32,9 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Pass the app instance to authRoutes file
+// Pass the app instance to route handler files
 authRoutes(app);
+finderRoutes(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
