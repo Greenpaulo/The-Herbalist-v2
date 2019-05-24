@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 class Finder extends Component {
+  onCategorySelect(keyword) {
+    this.props.fetchCategory(keyword);
+  }
+
   render() {
     return (
       <div>
@@ -14,7 +18,27 @@ class Finder extends Component {
 
         <h2> List of Conditions</h2>
 
-        <button type='button' onClick={this.props.fetchCategory('mental')} className='btn btn-success'> Mental and Emotional</button>
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'mental')} className='btn btn-success'> Mental/Emotional</button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'skin')} className='btn btn-success'> Skin </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'joints')} className='btn btn-success'> Joints/Muscles </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'digestion')} className='btn btn-success'> Digestion </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'throat')} className='btn btn-success'> Throat/Chest </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'bladder')} className='btn btn-success'> Bladder/Urinary </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'heart')} className='btn btn-success'> Heart/Circulation </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'head')} className='btn btn-success'> Head </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'womens')} className='btn btn-success'> Women's Health </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'mens')} className='btn btn-success'> Men's Health </button>
+
+        <button type='button' onClick={this.onCategorySelect.bind(this, 'children')} className='btn btn-success'> Children/Babies </button>
 
         <ConditionList />
       </div>

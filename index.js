@@ -5,6 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 const authRoutes = require('./routes/authRoutes');
 require('./models/Conditions');
+require('./models/Herbs');
 const finderRoutes = require('./routes/finderRoutes');
 require('./models/User');
 require('./services/passport');

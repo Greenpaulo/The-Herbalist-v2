@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import * as actions from '../actions';
+import uuid from 'uuid';
 
 class ConditionList extends Component {
+  // Call the fetchHerb action creator to fetch materia medica entry from DB.
+  onHerbSelect(herb) {
+    console.log(herb);
+    this.props.fetchHerb(herb);
+  }
+
+
   // Returns a title and herbs for each condition
   renderConditions() {
     if (this.props.conditions !== undefined) {
       return this.props.conditions.map((condition) => {
         return (
-          <div>
+          <div key={uuid.v4()}>
             <h2>{condition.title}</h2>
             {this.renderHerbs(condition)}
           </div>
@@ -19,7 +29,7 @@ class ConditionList extends Component {
   // Returns a list of herbs for the condition
   renderHerbs(condition) {
     return condition.herbs.map(herb => {
-      return <li>{herb}</li>
+      return <li key={uuid.v4()} ><Link to='/materia_medica' onClick={this.onHerbSelect.bind(this, herb)}>{herb}</Link></li>
     })
   }
 
@@ -42,4 +52,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(ConditionList);
+export default connect(mapStateToProps, actions)(ConditionList);

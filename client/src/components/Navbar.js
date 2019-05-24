@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class Header extends Component {
+class Navbar extends Component {
   // Helper method to show authenticated content
   renderContent() {
     switch (this.props.auth) {
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(Navbar);

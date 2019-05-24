@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER, FETCH_CATEGORY } from './types';
+import { FETCH_USER, FETCH_CATEGORY, FETCH_HERB } from './types';
 
 // Action creator to check whether the user is logged in.
 export const fetchUser = () => {
@@ -10,12 +10,19 @@ export const fetchUser = () => {
 };
 
 // Action creator to fetch the condition lists based on the category chosen.
-export const fetchCategory = (category) => {
+export const fetchCategory = (keyword) => {
   return dispatch => {
-    axios.get(`/api/conditions?${category}`)
+    axios.get(`/api/conditions?${keyword}`)
       .then(res => {
-        console.log(res.data)
         dispatch({ type: FETCH_CATEGORY, payload: res.data })
       });
+  };
+};
+
+// Action creator to fetch a herb's materia medica entry
+export const fetchHerb = (herb) => {
+  return dispatch => {
+    axios.get(`/api/herb?${herb}`)
+      .then(res => dispatch({ type: FETCH_HERB, payload: res.data }))
   };
 };
