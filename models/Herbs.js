@@ -14,9 +14,7 @@ const herbSchema = new Schema({
   dosage: String,
   botanicalDescription: String,
   energeticUsage: Array,
-  constituents: Array,
   clinicalTrials: Array,
-  pharmacology: String,
   externalUsage: Array
 
 })

@@ -27,6 +27,7 @@ class Navbar extends Component {
           <Link to="/home" className="navbar-brand">The Herbalist</Link>
           <ul className="navbar-nav">
             <li className="nav-item"><Link className="nav-link" to="/herb_finder">Herb Finder</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/materia_medica">Materia Medica</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/dispensary">Dispensary</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/cabinet">Medicine Cabinet</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>

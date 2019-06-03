@@ -29,7 +29,7 @@ class ConditionList extends Component {
   // Returns a list of herbs for the condition
   renderHerbs(condition) {
     return condition.herbs.map(herb => {
-      return <li key={uuid.v4()} ><Link to='/materia_medica' onClick={this.onHerbSelect.bind(this, herb)}>{herb}</Link></li>
+      return <li key={uuid.v4()} ><Link to={`/materia_medica/${herb.replace(/\W/g, '')}`} onClick={this.onHerbSelect.bind(this, herb)}>{herb}</Link></li>
     })
   }
 
