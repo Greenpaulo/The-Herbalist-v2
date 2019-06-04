@@ -7,7 +7,6 @@ import uuid from 'uuid';
 class ConditionList extends Component {
   // Call the fetchHerb action creator to fetch materia medica entry from DB.
   onHerbSelect(herb) {
-    console.log(herb);
     this.props.fetchHerb(herb);
   }
 
