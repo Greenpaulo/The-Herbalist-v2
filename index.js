@@ -8,7 +8,8 @@ const bodyParser = require('body-parser');
 require('./models/Conditions');
 require('./models/Herbs');
 require('./models/Medicine');
-const finderRoutes = require('./routes/finderRoutes');
+const conditionRoutes = require('./routes/conditionRoutes');
+const herbRoutes = require('./routes/herbRoutes');
 const medicineRoutes = require('./routes/medicineRoutes');
 require('./models/User');
 require('./services/passport');
@@ -41,7 +42,8 @@ app.use(bodyParser.json());
 
 // Pass the app instance to route handler files
 authRoutes(app);
-finderRoutes(app);
+conditionRoutes(app);
+herbRoutes(app);
 medicineRoutes(app);
 
 const PORT = process.env.PORT || 5000;

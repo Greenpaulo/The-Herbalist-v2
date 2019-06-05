@@ -1,16 +1,11 @@
 const mongoose = require('mongoose');
 
-// Creates an instance of our conditions class (DB collection).
-const Conditions = mongoose.model('conditions');
+// Creates an instance of our Herbs class (DB collection).
 const Herbs = mongoose.model('herbs');
 
 module.exports = app => {
 
-  app.get('/api/conditions/', (req, res) => {
-    Conditions.findOne({ keyword: req._parsedUrl.query })
-      .then(data => res.send(data));
-  })
-
+  // Handle request to fetch a single herb's entry
   app.get('/api/herb/', (req, res) => {
     Herbs.findOne({ name: req._parsedUrl.query })
       .then(data => res.send(data));

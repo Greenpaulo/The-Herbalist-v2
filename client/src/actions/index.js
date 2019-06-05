@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER, FETCH_CATEGORY, FETCH_HERB, FETCH_HERB_LIST, CREATE_MEDICINE } from './types';
+import { FETCH_USER, FETCH_CATEGORY, FETCH_HERB, FETCH_HERB_LIST, CREATE_MEDICINE, FETCH_MEDICINE_LIST, STORE_MEDICINE } from './types';
 
 // Action creator to check whether the user is logged in.
 export const fetchUser = () => {
@@ -36,11 +36,28 @@ export const fetchHerbList = () => {
 };
 
 //Action creator to create a medicine/prescription in the database
-export const createMedicine = (values) => {
+export const createMedicine = (history, values) => {
   return dispatch => {
     axios.post('/api/medicine', { values })
       .then(res => {
         dispatch({ type: CREATE_MEDICINE, payload: res.data })
       })
+    history.push('/cabinet');
+  };
+};
+
+// Action creator to fetch user created medicines from the DB
+export const fetchMedicineList = () => {
+  return dispatch => {
+    axios.get('/api/medicine_list')
+      .then(res => {
+        dispatch({ type: FETCH_MEDICINE_LIST, payload: res.data })
+      })
   }
 }
+
+// Action creator to store a single medicine prescription in the redux store
+export const storeMedicine = (medicine) => {
+  return ({ type: STORE_MEDICINE, payload: medicine })
+
+};

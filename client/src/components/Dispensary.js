@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../actions';
 import uuid from 'uuid';
 
@@ -15,7 +16,7 @@ class Dispensary extends Component {
     if (this.props.herbList !== null && this.props.herbList !== undefined) {
       return this.props.herbList.map(herb => {
         return (
-          <option key={uuid.v4()} value={herb.title}>{herb.title}</option>
+          <option key={uuid.v4()} id={herb.title}>{herb.title}</option>
         )
       })
     }
@@ -167,7 +168,7 @@ const FormikDispensary = withFormik({
     return {
       // TODO - later here when we implement edit functionality, we can fetch an existing Rx from the DB and then use mapStateToProps to put the info in the prop. Then we use mapPropsToValues to take fill the form.
       patientName: patientName || '',
-      herb1: herb1 || '',
+      herb1: 'Rumex Crispus',
       herb2: herb2 || '',
       herb3: herb3 || '',
       herb4: herb4 || '',
@@ -185,15 +186,13 @@ const FormikDispensary = withFormik({
     };
   },
   handleSubmit(values, { props }) {
-    // TODO - HTTP Request to express API server goes here
-    console.log(props);
-    props.createMedicine(values);
-
+    props.createMedicine(props.history, values);
   }
+
 })(Dispensary)
 
 const mapStateToProps = state => {
   return { herbList: state.herbList }
 }
 
-export default connect(mapStateToProps, actions)(FormikDispensary);
+export default withRouter(connect(mapStateToProps, actions)(FormikDispensary));

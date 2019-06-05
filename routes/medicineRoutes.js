@@ -14,20 +14,15 @@ module.exports = app => {
       user: req.user.googleId,
       patientName: values.patientName,
       date: Date.now(),
-      herb1: values.herb1,
-      herb2: values.herb2,
-      herb3: values.herb3,
-      herb4: values.herb4,
-      herb5: values.herb5,
-      herb6: values.herb6,
-      herb7: values.herb7,
-      dosage1: values.dosage1,
-      dosage2: values.dosage2,
-      dosage3: values.dosage3,
-      dosage4: values.dosage4,
-      dosage5: values.dosage5,
-      dosage6: values.dosage6,
-      dosage7: values.dosage7,
+      herbs: [
+        { name: values.herb1, dosage: values.dosage1 },
+        { name: values.herb2, dosage: values.dosage2 },
+        { name: values.herb3, dosage: values.dosage3 },
+        { name: values.herb4, dosage: values.dosage4 },
+        { name: values.herb5, dosage: values.dosage5 },
+        { name: values.herb6, dosage: values.dosage6 },
+        { name: values.herb7, dosage: values.dosage7 }
+      ],
       notes: values.notes
     })
 
@@ -37,5 +32,18 @@ module.exports = app => {
     // Return the newly saved DB entry.
     res.send(data)
   })
+
+
+  // Handle the medicines fetch request, to get a user list of medicines. Returns the medicines with most recently created first.
+  app.get('/api/medicine_list', async (req, res) => {
+    const data = await Medicine.find({ user: req.user.googleId }).sort({ date: -1 });
+    res.send(data);
+  })
+
+  // // Handle a get request to fetch a single medicine entry
+  // app.get('/api/medicine/', (req, res) => {
+  //   Medicine.findOne({ name: req._parsedUrl.query })
+  //     .then(data => res.send(data));
+  // })
 
 };

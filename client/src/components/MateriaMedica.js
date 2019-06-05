@@ -5,15 +5,12 @@ import uuid from 'uuid';
 
 class MateriaMedica extends Component {
   componentDidMount = () => {
-    console.log(this.props.match.params.herb)
     this.props.fetchHerb(this.props.match.params.herb)
   }
 
   renderActionsIndications = () => {
     const { currentHerb } = this.props;
-    console.log(currentHerb);
     if (currentHerb.actionsIndications !== undefined) {
-      console.log(currentHerb.actionsIndications);
       return currentHerb.actionsIndications.map((actInd) => {
         return (
           <div key={uuid.v4()}>
@@ -133,13 +130,11 @@ class MateriaMedica extends Component {
 
   renderSection = (section) => {
     const { currentHerb } = this.props;
-    console.log(this.props.currentHerb[section]);
     if (currentHerb[section] !== null &&
       currentHerb[section] !== undefined) {
       return (
         <div>
           <h3>{section}:</h3>
-          {/* {this.`render+${section}`()} */}
         </div>
       )
     }
