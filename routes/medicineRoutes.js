@@ -40,6 +40,27 @@ module.exports = app => {
     res.send(data);
   })
 
+  // Handle put request to update a stored prescription in the DB
+  app.put('/api/medicine', async (req, res) => {
+    const { values } = req.body;
+    console.log(values.herb1);
+    console.log(req.body.medicineID)
+    const data = await Medicine.findByIdAndUpdate(req.body.medicineID, {
+      patientName: values.patientName,
+      herbs: [
+        { name: values.herb1, dosage: values.dosage1 },
+        { name: values.herb2, dosage: values.dosage2 },
+        { name: values.herb3, dosage: values.dosage3 },
+        { name: values.herb4, dosage: values.dosage4 },
+        { name: values.herb5, dosage: values.dosage5 },
+        { name: values.herb6, dosage: values.dosage6 },
+        { name: values.herb7, dosage: values.dosage7 }
+      ],
+      notes: values.notes
+    })
+    res.send(data);
+  })
+
   // // Handle a get request to fetch a single medicine entry
   // app.get('/api/medicine/', (req, res) => {
   //   Medicine.findOne({ name: req._parsedUrl.query })

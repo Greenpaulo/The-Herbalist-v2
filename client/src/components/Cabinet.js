@@ -5,7 +5,7 @@ import uuid from 'uuid';
 
 class Cabinet extends Component {
   // Fetch the users previously created medicines
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchMedicineList();
   }
 
@@ -30,6 +30,7 @@ class Cabinet extends Component {
 
             <p>Notes: {medicine.notes}</p>
             <button onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
+            {/* TODO - DELETE - delete api request */}
             <button>Delete</button>
             <br />
             <br />

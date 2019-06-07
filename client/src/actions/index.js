@@ -61,3 +61,12 @@ export const storeMedicine = (medicine) => {
   return ({ type: STORE_MEDICINE, payload: medicine })
 
 };
+
+// Action creator to update a medicine prescription in the DB
+export const updateMedicine = (history, medicineID, values) => {
+  return dispatch => {
+    axios.put('/api/medicine', { medicineID, values })
+      .then(res => dispatch({ type: STORE_MEDICINE, payload: res.data }))
+    history.push('/cabinet');
+  };
+};
