@@ -361,34 +361,6 @@ class EditMedicine extends Component {
   }
 }
 
-// const FormikEditMedicine = withFormik({
-//   mapPropsToValues({ medicine }) {
-//     if (medicine !== null) {
-//       return {
-//         patientName: medicine.patientName || '',
-//         herb1: medicine.herbs[0].name || '',
-//         herb2: medicine.herbs[1].name || '',
-//         herb3: medicine.herbs[2].name || '',
-//         herb4: medicine.herbs[3].name || '',
-//         herb5: medicine.herbs[4].name || '',
-//         herb6: medicine.herbs[5].name || '',
-//         herb7: medicine.herbs[6].name || '',
-//         dosage1: medicine.herbs[0].dosage || '',
-//         dosage2: medicine.herbs[1].dosage || '',
-//         dosage3: medicine.herbs[2].dosage || '',
-//         dosage4: medicine.herbs[3].dosage || '',
-//         dosage5: medicine.herbs[4].dosage || '',
-//         dosage6: medicine.herbs[5].dosage || '',
-//         dosage7: medicine.herbs[6].dosage || '',
-//         notes: medicine.notes || ''
-//       };
-//     }
-//   },
-//   handleSubmit(values, { props }) {
-//     props.updateMedicine(props.history, props.medicine, values);
-//   }
-
-// })(EditMedicine)
 
 const mapStateToProps = state => {
   return { storedMedicine: state.storedMedicine, herbList: state.herbList };

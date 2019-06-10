@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/index';
 import uuid from 'uuid';
+import axios from 'axios';
 
 class Cabinet extends Component {
   // Fetch the users previously created medicines
@@ -11,9 +12,15 @@ class Cabinet extends Component {
 
   onEditClick(medicine) {
     this.props.storeMedicine(medicine);
-    console.log(medicine)
     this.props.history.push('/edit_medicine');
   }
+
+  onDeleteClick(medicine) {
+    axios.delete(`/api/medicine?${medicine._id}`)
+    this.props.fetchMedicineList();
+  };
+
+
 
   // Render a list of user created medicines
   renderMedicines() {
@@ -31,7 +38,7 @@ class Cabinet extends Component {
             <p>Notes: {medicine.notes}</p>
             <button onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
             {/* TODO - DELETE - delete api request */}
-            <button>Delete</button>
+            <button onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
             <br />
             <br />
           </div>
