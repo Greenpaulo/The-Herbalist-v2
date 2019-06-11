@@ -13,16 +13,13 @@ const herbRoutes = require('./routes/herbRoutes');
 const medicineRoutes = require('./routes/medicineRoutes');
 require('./models/User');
 require('./services/passport');
+const path = require('path');
 
 
 const app = express();
 
 // Connect mongoose to MongoDB
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
-
-app.get('/', (req, res) => {
-  res.send({ hi: 'there' })
-})
 
 // Wiring up express to use cookies, with the help of cookie-session middleware.
 app.use(cookieSession({
@@ -45,6 +42,16 @@ authRoutes(app);
 conditionRoutes(app);
 herbRoutes(app);
 medicineRoutes(app);
+
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
