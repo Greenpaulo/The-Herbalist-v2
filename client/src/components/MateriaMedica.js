@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import { Link } from 'react-router-dom';
 import * as actions from '../actions';
 import uuid from 'uuid';
 
 class MateriaMedica extends Component {
   componentDidMount = () => {
     this.props.fetchHerb(this.props.match.params.herb)
+    this.props.fetchHerbList();
   }
 
   renderActionsIndications = () => {
@@ -140,6 +142,23 @@ class MateriaMedica extends Component {
     }
   }
 
+  renderHerbSelect = () => {
+    if (this.props.herbList !== null && this.props.herbList !== undefined) {
+      return this.props.herbList.map(herb => {
+        return (
+          <option key={uuid.v4()} id={herb.title}>{herb.title}</option>
+        )
+      })
+    }
+  }
+
+  // onHerbSelect = (e) => {
+  //   console.log(e.target.value.replace(/ /g, "_"));
+
+  //   this.props.fetchHerbByLatin(e.target.value.replace(/ /g, "_"))
+
+  // }
+
 
   render() {
     const { currentHerb } = this.props;
@@ -147,6 +166,19 @@ class MateriaMedica extends Component {
     return (
       <div>
         {/* TODO - ADD HERB SEARCH BAR AND DROPDOWN SELECT BUTTON*/}
+        {/* <div class="dropdown">
+          <button onClick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <li key={uuid.v4()} >
+              <Link to={`/materia_medica/vitex`}> Vitex </Link>
+            </li>
+          </div>
+        </div> */}
+
+
+
+
+        {/* <h1>{currentHerb.title.replace(/_/g, " ")}</h1> */}
         <h1>{currentHerb.title}</h1>
         <h3>Common Name: {currentHerb.commonName}</h3>
         <h3>Family: {currentHerb.family}</h3>
@@ -186,6 +218,6 @@ class MateriaMedica extends Component {
 }
 
 const MapStateToProps = (state) => {
-  return { currentHerb: state.herb }
+  return { currentHerb: state.herb, herbList: state.herbList }
 }
 export default connect(MapStateToProps, actions)(MateriaMedica);

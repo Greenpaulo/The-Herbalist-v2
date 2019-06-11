@@ -10,11 +10,13 @@ class Cabinet extends Component {
     this.props.fetchMedicineList();
   }
 
+  // Edit a medicine
   onEditClick(medicine) {
     this.props.storeMedicine(medicine);
     this.props.history.push('/edit_medicine');
   }
 
+  // Delete a medicine from the cabinet
   onDeleteClick(medicine) {
     axios.delete(`/api/medicine?${medicine._id}`)
     this.props.fetchMedicineList();

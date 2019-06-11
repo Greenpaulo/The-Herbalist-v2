@@ -66,14 +66,6 @@ module.exports = app => {
     console.log(req._parsedUrl.query);
     Medicine.findByIdAndDelete({ _id: req._parsedUrl.query })
       .then(data => res.send(data))
-
-
   })
-
-  // // Handle a get request to fetch a single medicine entry
-  // app.get('/api/medicine/', (req, res) => {
-  //   Medicine.findOne({ name: req._parsedUrl.query })
-  //     .then(data => res.send(data));
-  // })
 
 };

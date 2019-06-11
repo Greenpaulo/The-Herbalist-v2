@@ -22,16 +22,18 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar bg-dark">
-        <Link to="/home" className="navbar-logo">The Herbalist</Link>
-        <ul className="navbar-nav">
-          <li className="nav-item"><Link className="nav-link" to="/herb_finder">Herb Finder</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/materia_medica/Yarrow">Materia Medica</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/dispensary">Dispensary</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/cabinet">Medicine Cabinet</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
-          {this.renderContent()}
-        </ul>
+      <nav className="navbar navbar-expand-sm navbar-dark bg-main">
+        <div className="container">
+          <Link to="/home" className="navbar-brand">The Herbalist</Link>
+          <ul className="navbar-nav">
+            <li className="nav-item"><Link className="nav-link" to="/herb_finder">Herb Finder</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/materia_medica/Yarrow">Materia Medica</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/dispensary">Dispensary</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/cabinet">Medicine Cabinet</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
+            {this.renderContent()}
+          </ul>
+        </div>
       </nav>
     )
   }
