@@ -22,6 +22,11 @@ class Cabinet extends Component {
     this.props.fetchMedicineList();
   };
 
+  // Render content based on authentication status
+  renderContent() {
+
+  }
+
 
 
   // Render a list of user created medicines
@@ -31,18 +36,15 @@ class Cabinet extends Component {
 
       return medicines.map(medicine => {
         return (
-          <div key={uuid.v4()}>
+          <div className="card" key={uuid.v4()}>
             <h3>Date: {medicine.date}</h3>
             <h3>Patient Name: {medicine.patientName}</h3>
 
             {this.renderHerbAndDosage(medicine)}
 
             <p>Notes: {medicine.notes}</p>
-            <button onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
-            {/* TODO - DELETE - delete api request */}
-            <button onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
-            <br />
-            <br />
+            <button className="btn btn-dark" onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
+            <button className="btn btn-danger" onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
           </div>
         )
       })
