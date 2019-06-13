@@ -1,3 +1,65 @@
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 7.5rem;
+  margin-bottom: 3rem;
+}
+
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2rem;
+  margin-bottom: 3rem 0;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2rem;
+  margin: 2.7rem 0 3.5rem;
+}
+
+.medium {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.lead {
+  font-size: 1.55rem;
+  line-height: 1.7em;
+  margin: 2rem 0;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  margin: 1.5rem 0;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-1.5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-2.5 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.text-primary {
+  color: #2a7a04;
+}
+
 .bg-primary {
   background-color: #2a7a04;
   color: #fff;
@@ -6,6 +68,129 @@
 .bg-dark {
   background-color: #282e34;
   color: #fff;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #282e34;
+}
+
+.bg-lighter {
+  background: #f9f9f9;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 1rem 1.5rem;
+}
+
+.card-dark {
+  background: #e7e7e7;
+  padding: 1.5rem 1.5rem;
+}
+
+.card-dark p {
+  font-size: 1.2rem;
+}
+
+.list-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.7rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0.6rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn.btn-primary {
+  background-color: #2a7a04;
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background: #339305;
+}
+
+.btn.btn-dark {
+  background-color: #282e34;
+  color: #fff;
+}
+
+.btn.btn-dark:hover {
+  background: #333b42;
+}
+
+.btn.btn-light {
+  background-color: #f4f4f4;
+  color: #282e34;
+}
+
+.btn.btn-light:hover {
+  background: white;
+}
+
+.btn.btn-success {
+  background-color: green;
+  color: #fff;
+}
+
+.btn.btn-success:hover {
+  background: #009a00;
+}
+
+.btn.btn-danger {
+  background-color: red;
+  color: #fff;
+}
+
+.btn.btn-danger:hover {
+  background: #ff1a1a;
+}
+
+.btn:hover {
+  background: #54616e;
+  color: #fff;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form input[type='number'],
+.form select {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.form input[type='text'] {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.form label {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.form textarea {
+  font-size: 1.2rem;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
 * {
@@ -23,15 +208,19 @@ body, html {
   line-height: 1.8em;
   color: #333;
   background-color: #fff;
-  /* color: #fff; */
 }
 
 a {
   text-decoration: none;
+  color: #111;
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
 }
 
 .navbar {
@@ -49,7 +238,7 @@ ul {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px #2a7a04;
+  border-bottom: solid 1px #44c406;
   opacity: 0.9;
 }
 
@@ -63,6 +252,8 @@ ul {
   padding: 0.45rem;
   margin: 0 0.25rem;
   color: #f4f4f4;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .navbar a:hover {
@@ -71,6 +262,21 @@ ul {
 
 .navbar i {
   color: #2a7a04;
+}
+
+.login {
+  background-color: #2a7a04;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.login:hover {
+  background-color: #f4f4f4;
+}
+
+.login a:hover {
+  color: #282e34;
 }
 
 .navbar-logo {
@@ -88,6 +294,12 @@ ul {
 
 .pimg1 a, .pimg2 a, .pimg3 a {
   color: #000;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.pimg1 a:hover, .pimg2 a:hover, .pimg3 a:hover {
+  color: #2a7a04;
 }
 
 .pimg1 {
@@ -108,6 +320,15 @@ ul {
 .section {
   text-align: center;
   padding: 50px 80px;
+}
+
+.section h2 {
+  margin: 1.25rem;
+}
+
+.section p {
+  margin: 1rem auto;
+  width: 80%;
 }
 
 .section-light {
@@ -148,4 +369,174 @@ ul {
 
 .pimg2 a {
   color: #f4f4f4;
+}
+
+#section1 {
+  margin: 4rem 0 4rem 0;
+}
+
+#section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+#section2 #info p {
+  padding: 2rem 2rem 2rem 3rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+#section2 #info #para1 {
+  margin-top: 1.5rem;
+}
+
+#section2 #leaf-drop {
+  max-width: 400px;
+}
+
+#section3 {
+  margin-top: 6rem;
+}
+
+#section3 h2 {
+  margin-bottom: 4rem;
+}
+
+#section3 #grid {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+      grid-template-areas: "square1 square2" "square3 square4";
+}
+
+#section3 #grid #square1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: square1;
+}
+
+#section3 #grid #square2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: square2;
+}
+
+#section3 #grid #square3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: square3;
+}
+
+#section3 #grid #square4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: square4;
+}
+
+#section3 #grid #square1, #section3 #grid #square2, #section3 #grid #square3, #section3 #grid #square4 {
+  padding: 3rem;
+}
+
+#section3 #grid h3 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+#section3 #grid p {
+  font-size: 1.2rem;
+}
+
+#section3 #grid i {
+  color: #2a7a04;
+}
+
+section#finder-info {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+section#finder-info i {
+  margin: 0.5rem 1rem 0 0;
+}
+
+section#finder-info p {
+  line-height: 2rem;
+}
+
+section#condition-selector {
+  background-color: #f4f4f4;
+  margin: 4rem 0rem 4rem 0;
+}
+
+section#condition-selector h2 {
+  padding: 2rem 2rem 0 2rem;
+  margin: 0;
+}
+
+section#condition-selector #buttons {
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+section#condition-selector #buttons button {
+  margin: 0.8rem;
+}
+
+section#condition-list h2 {
+  margin-top: 1rem;
+}
+
+section#condition-list .condition {
+  margin-bottom: 2rem;
+}
+
+section#condition-list li {
+  list-style: none;
+}
+
+section#condition-list a {
+  font-size: 1.2rem;
+}
+
+.action-indication {
+  margin-bottom: 2rem;
+}
+
+.action-indication h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #2a7a04;
+}
+
+.action-indication h4 {
+  font-size: 1.1rem;
+}
+
+.action-indication .actions {
+  padding-bottom: 1rem;
+}
+
+.action-indication .indications i {
+  padding: 0.3rem 0rem 0 0.5rem;
+}
+
+#other-info h3 {
+  color: #2a7a04;
+  margin-bottom: 0.5rem;
+}
+
+#dispensary i {
+  color: #2a7a04;
+  margin-right: 1rem;
+}
+
+#dispensary #card-one p {
+  font-weight: 500;
+  margin: 1.7rem 0;
+}
+
+#dispensary .list-group i {
+  margin-top: 0.4rem;
 }

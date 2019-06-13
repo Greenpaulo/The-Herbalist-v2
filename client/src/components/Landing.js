@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
-    <React.Fragment>
+    <Fragment>
 
       <div className="pimg1">
         <div className="ptext title">
           <span className="border trans">
-            <a href="about.html">The Herbalist</a>
+            <Link to="/">The Herbalist</Link>
           </span>
         </div>
       </div>
@@ -25,7 +26,7 @@ const Landing = () => {
       <div className="pimg2">
         <div className="ptext">
           <span className="border inside_head">
-            <a href="about.html">Herbal Medicine</a>
+            <Link to="/how_to_use">Herbal Medicine</Link>
           </span>
         </div>
       </div>
@@ -59,12 +60,12 @@ const Landing = () => {
       <div className="pimg1">
         <div className="ptext title">
           <span className="border trans">
-            <a href="about.html">The Herbalist</a>
+            <Link to="/how_to_use">The Herbalist</Link>
           </span>
         </div>
       </div>
 
-    </React.Fragment>
+    </Fragment>
   );
 }
 

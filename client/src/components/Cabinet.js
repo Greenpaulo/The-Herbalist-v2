@@ -62,9 +62,9 @@ class Cabinet extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Medicine Cabinet</h1>
-        <p>Here you'll find all your previously dispenced medicines!</p>
+      <div className="container">
+        <h1 className="large text-primary">Medicine Cabinet</h1>
+        <p className="lead">Here you'll find all your previously dispenced medicines!</p>
         {this.renderMedicines()}
       </div>
     )

@@ -15,12 +15,15 @@ class MateriaMedica extends Component {
     if (currentHerb.actionsIndications !== undefined) {
       return currentHerb.actionsIndications.map((actInd) => {
         return (
-          <div key={uuid.v4()}>
-            <h3>Actions:</h3>
-            <h4>{actInd.actions}</h4>
-            <h3>Indications:</h3>
-            {this.renderIndications(actInd)}
-            <br />
+          <div className="action-indication card" key={uuid.v4()}>
+            <div className="actions">
+              <h3 className="my-1.5">Actions:</h3>
+              <h4>{actInd.actions}</h4>
+            </div>
+            <div className="indications">
+              <h3 className="my-1.5">Indications:</h3>
+              {this.renderIndications(actInd)}
+            </div>
           </div>
         )
       })
@@ -29,7 +32,12 @@ class MateriaMedica extends Component {
 
   renderIndications = (actInd) => {
     return actInd.indications.map(indication => {
-      return <h4 key={uuid.v4()}>{indication}</h4>
+      return (
+        <div key={uuid.v4()} className="list-group">
+          <h4>{indication}</h4>
+          <i className="fas fa-check"></i>
+        </div>
+      )
     })
   }
 
@@ -38,7 +46,7 @@ class MateriaMedica extends Component {
     if (currentHerb.contraIndications !== null &&
       currentHerb.contraIndications !== undefined) {
       return (
-        <div>
+        <div className="card-dark">
           <h3>Contra-indications:</h3>
           {this.renderContraIndication()}
         </div>
@@ -57,7 +65,7 @@ class MateriaMedica extends Component {
     if (currentHerb.safety !== null &&
       currentHerb.safety !== undefined) {
       return (
-        <div>
+        <div className="card-dark">
           <h3>Safety: </h3>
           <p>{currentHerb.safety}</p>
         </div>
@@ -69,7 +77,12 @@ class MateriaMedica extends Component {
     const { currentHerb } = this.props;
     if (currentHerb.botanicalDescription !== null &&
       currentHerb.botanicalDescription !== undefined) {
-      return <p>Botanical Description: {currentHerb.botanicalDescription}</p>
+      return (
+        <div className="card-dark">
+          <h3>Botanical Description: </h3>
+          <p>{currentHerb.botanicalDescription}</p>
+        </div>
+      )
     }
   }
 
@@ -78,7 +91,7 @@ class MateriaMedica extends Component {
     if (currentHerb.externalUsage !== null &&
       currentHerb.externalUsage !== undefined) {
       return (
-        <div>
+        <div className="card-dark">
           <h3>External Usage:</h3>
           {this.renderUsage()}
         </div>
@@ -97,7 +110,7 @@ class MateriaMedica extends Component {
     if (currentHerb.energeticUsage !== null &&
       currentHerb.energeticUsage !== undefined) {
       return (
-        <div>
+        <div className="card-dark">
           <h3>Other Traditional Usage:</h3>
           {this.renderTradition()}
         </div>
@@ -116,7 +129,7 @@ class MateriaMedica extends Component {
     if (currentHerb.clinicalTrials !== null &&
       currentHerb.clinicalTrials !== undefined) {
       return (
-        <div>
+        <div className="card-dark">
           <h3>Clinical Trials:</h3>
           {this.renderTrial()}
         </div>
@@ -130,17 +143,17 @@ class MateriaMedica extends Component {
     })
   }
 
-  renderSection = (section) => {
-    const { currentHerb } = this.props;
-    if (currentHerb[section] !== null &&
-      currentHerb[section] !== undefined) {
-      return (
-        <div>
-          <h3>{section}:</h3>
-        </div>
-      )
-    }
-  }
+  // renderSection = (section) => {
+  //   const { currentHerb } = this.props;
+  //   if (currentHerb[section] !== null &&
+  //     currentHerb[section] !== undefined) {
+  //     return (
+  //       <div>
+  //         <h3>{section}:</h3>
+  //       </div>
+  //     )
+  //   }
+  // }
 
   renderHerbSelect = () => {
     if (this.props.herbList !== null && this.props.herbList !== undefined) {
@@ -164,7 +177,7 @@ class MateriaMedica extends Component {
     const { currentHerb } = this.props;
 
     return (
-      <div>
+      <div className="container">
         {/* TODO - ADD HERB SEARCH BAR AND DROPDOWN SELECT BUTTON*/}
         {/* <div class="dropdown">
           <button onClick="myFunction()" class="dropbtn">Dropdown</button>
@@ -176,42 +189,43 @@ class MateriaMedica extends Component {
         </div> */}
 
 
+        <section id="herb-entry">
+          <h1 className="large text-primary">{currentHerb.title}</h1>
 
+          <div id="herb-id">
+            <h3 className="subtitle">Common Name: {currentHerb.commonName}</h3>
+            <h3 className="subtitle">Family: {currentHerb.family}</h3>
+            <h3 className="subtitle">Parts Used: {currentHerb.partsUsed}</h3>
+            <img src="" alt="" />
+          </div>
 
-        {/* <h1>{currentHerb.title.replace(/_/g, " ")}</h1> */}
-        <h1>{currentHerb.title}</h1>
-        <h3>Common Name: {currentHerb.commonName}</h3>
-        <h3>Family: {currentHerb.family}</h3>
-        <h3>Parts Used: {currentHerb.partsUsed}</h3>
-        <br />
+          {this.renderActionsIndications()}
 
-        {this.renderActionsIndications()}
-        <br />
+          <section id="other-info">
 
-        {this.renderContraIndicationList()}
-        <br />
+            {this.renderContraIndicationList()}
 
-        {this.renderSafety()}
-        <br />
+            {this.renderSafety()}
 
-        <h3>Dosage:</h3>
-        <p>{currentHerb.dosage}</p>
-        <br />
+            <div className="card-dark">
+              <h3>Dosage:</h3>
+              <p>{currentHerb.dosage}</p>
+            </div>
 
-        {this.renderSection('dosage')}
+            {/* {this.renderSection('dosage')} */}
 
-        {this.renderBotanicalDescription()}
-        <br />
+            {this.renderBotanicalDescription()}
 
-        {this.renderClinicalTrials()}
-        <br />
+            {this.renderClinicalTrials()}
 
-        {this.renderExternalUsage()}
-        <br />
+            {this.renderExternalUsage()}
 
-        {this.renderEnergeticUsage()}
-        <br />
+            {this.renderEnergeticUsage()}
+          </section>
+        </section>
+
       </div>
+
     )
   }
 

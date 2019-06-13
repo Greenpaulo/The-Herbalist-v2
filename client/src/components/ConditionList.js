@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as actions from '../actions';
@@ -16,8 +16,8 @@ class ConditionList extends Component {
     if (this.props.conditions !== undefined) {
       return this.props.conditions.map((condition) => {
         return (
-          <div key={uuid.v4()}>
-            <h2>{condition.title}</h2>
+          <div className="card condition" key={uuid.v4()}>
+            <h2 className="lead">{condition.title}</h2>
             {this.renderHerbs(condition)}
           </div>
         )
@@ -35,10 +35,10 @@ class ConditionList extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.category}</h1>
+      <Fragment>
+        <h2 className="medium">{this.props.category}</h2>
         {this.renderConditions()}
-      </div>
+      </Fragment>
     )
   }
 }

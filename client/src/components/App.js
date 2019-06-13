@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import '../css/style.css'
 import Navbar from './Navbar';
-import Home from './Home';
+import HowToUse from './HowToUse';
 import Landing from './Landing';
 import Finder from './Finder';
 import MateriaMedica from './MateriaMedica';
@@ -27,7 +27,7 @@ class App extends Component {
         <Fragment>
           <Route path='/' component={Navbar} />
           <Route exact path='/' component={Landing} />
-          <Route path='/home' component={Home} />
+          <Route path='/how_to_use' component={HowToUse} />
           <Route path='/herb_finder' component={Finder} />
           <Route path='/materia_medica/:herb' component={MateriaMedica} />
           <Route path='/dispensary' component={Dispensary} />

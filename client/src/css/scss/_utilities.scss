@@ -1,3 +1,67 @@
+// Container
+.container {
+  max-width: $max-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 7.5rem;
+  margin-bottom: 3rem;
+}
+
+// Text styles
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2rem;
+  margin-bottom: 3rem 0;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2rem;
+  margin: 2.7rem 0 3.5rem;
+}
+
+.medium {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.lead {
+  font-size: 1.55rem;
+  line-height: 1.7em;
+  margin: 2rem 0;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  margin: 1.5rem 0;
+}
+
+// Margins
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-1.5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.my-2.5 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+// Text Colours
+.text-primary {
+  color: $primary-color;
+}
+
 // Backgrounds
 .bg {
   &-primary {
@@ -9,4 +73,95 @@
     background-color: $dark-color;
     color: #fff;
   }
+
+  &-light {
+    background-color: $light-color;
+    color: $dark-color;
+  }
+
+  &-lighter {
+    background: lighten($light-color, 2%);
+  }
+}
+
+// Card
+.card {
+  background: $light-color;
+  padding: 1rem 1.5rem;
+}
+
+.card-dark {
+  background: darken($light-color, 5%);
+  padding: 1.5rem 1.5rem;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+// List Group
+.list-group {
+    display: flex;
+    margin: 1.7rem 0;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background-color: $light-color;
+  color: #333;
+  padding: 0.6rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: #fff;
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+  
+  &.btn-dark {
+    background-color: $dark-color;
+    color: #fff;
+    &:hover {
+      background: lighten($dark-color, 5%);
+    }
+  }
+  
+  &.btn-light {
+    background-color: $light-color;
+    color: $dark-color;
+    &:hover {
+      background: lighten($light-color, 5%);
+    }
+  }
+  
+  &.btn-success {
+    background-color: $success-color;
+    color: #fff;
+    &:hover {
+      background: lighten($success-color, 5%);
+    }
+  }
+  
+  &.btn-danger {
+    background-color: $danger-color;
+    color: #fff;
+    &:hover {
+      background: lighten($danger-color, 5%);
+    }
+  }
+
+  &:hover {
+    background: lighten($dark-color, 20%);
+    color: #fff;
+  }
+  
+  
 }
