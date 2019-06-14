@@ -27,7 +27,7 @@ const Home = () => {
           control of our health and our lives, we see that we can create anything we want in our life. Ultimately
             this power is our birthright.</p>
         </div>
-        <img id="leaf-drop" src="../images/leaf-drop.jpg" alt="Medicine bottle" />
+        {/* <img id="leaf-drop" src="../images/leaf-drop.jpg" alt="Medicine bottle" /> */}
       </section>
 
 

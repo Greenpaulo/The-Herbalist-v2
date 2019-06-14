@@ -27,15 +27,17 @@ passport.use(new GoogleStrategy({
   proxy: true
 },
   async (accessToken, refreshToken, profile, done) => {
-    const existingUser = await User.findOne({ googleId: profile.id });
+    const user = await new User({ googleId: profile.id }).save();
+    done(null, user);
+    // const existingUser = await User.findOne({ googleId: profile.id });
 
-    if (existingUser) {
-      // We already have a record with the given profile ID
-      done(null, existingUser);
-    } else {
-      // We don't have a user record with this ID, make a new record.
-      const user = await new User({ googleId: profile.id }).save();
-      done(null, user);
-    }
+    // if (existingUser) {
+    //   // We already have a record with the given profile ID
+    //   done(null, existingUser);
+    // } else {
+    //   // We don't have a user record with this ID, make a new record.
+    //   const user = await new User({ googleId: profile.id }).save();
+    //   done(null, user);
+    // }
   }
 ));
