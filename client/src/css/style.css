@@ -408,7 +408,8 @@ img {
   display: -ms-grid;
   display: grid;
   text-align: center;
-      grid-template-areas: "square1 square2" "square3 square4";
+      grid-template-areas: "square1 square2"
+ "square3 square4";
 }
 
 #section3 #grid #square1 {
