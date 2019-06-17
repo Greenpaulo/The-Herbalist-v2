@@ -9,6 +9,7 @@ import uuid from 'uuid';
 class Dispensary extends Component {
   // Fetch the list of herbs for the herb select
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchHerbList();
   }
 
@@ -21,6 +22,8 @@ class Dispensary extends Component {
       })
     }
   }
+
+
 
   render() {
     return (

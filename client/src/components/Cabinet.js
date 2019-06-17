@@ -7,6 +7,7 @@ import axios from 'axios';
 class Cabinet extends Component {
   // Fetch the users previously created medicines
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchMedicineList();
   }
 

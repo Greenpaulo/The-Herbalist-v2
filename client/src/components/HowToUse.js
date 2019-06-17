@@ -28,7 +28,6 @@ const Home = () => {
             this power is our birthright.</p>
         </div>
         <img id="leaf-drop" src="./images/leaf-drop.jpg" alt="Medicine bottle" />
-        {/* <div id="leaf-drop"></div> */}
       </section>
 
 

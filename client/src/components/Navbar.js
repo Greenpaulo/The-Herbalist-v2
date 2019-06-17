@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 class Navbar extends Component {
   // Helper method to show authenticated content
   renderLogin() {
-    switch (this.props.auth) {
+    switch (this.props.auth.user) {
       // If we don't know yet, show nothing.
       case null:
         return;

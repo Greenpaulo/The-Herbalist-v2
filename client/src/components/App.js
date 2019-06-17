@@ -11,9 +11,11 @@ import Cabinet from './Cabinet';
 import Edit from './EditMedicine';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import PrivateRoute from './routing/PrivateRoute'
 
 // Dummy components
 const About = () => <h2>About</h2>
+const Login = () => <h2>Login</h2>
 
 
 class App extends Component {
@@ -30,10 +32,11 @@ class App extends Component {
           <Route path='/how_to_use' component={HowToUse} />
           <Route path='/herb_finder' component={Finder} />
           <Route path='/materia_medica/:herb' component={MateriaMedica} />
-          <Route path='/dispensary' component={Dispensary} />
-          <Route path='/cabinet' component={Cabinet} />
+          <PrivateRoute path='/dispensary' component={Dispensary} />
+          <PrivateRoute path='/cabinet' component={Cabinet} />
           <Route path='/about' component={About} />
-          <Route path='/edit_medicine' component={Edit} />
+          <PrivateRoute path='/edit_medicine' component={Edit} />
+          <Route path='/login' component={Login} />
         </Fragment>
       </BrowserRouter>
     );

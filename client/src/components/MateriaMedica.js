@@ -6,6 +6,7 @@ import uuid from 'uuid';
 
 class MateriaMedica extends Component {
   componentDidMount = () => {
+    window.scrollTo(0, 0);
     this.props.fetchHerb(this.props.match.params.herb)
     this.props.fetchHerbList();
   }
@@ -173,21 +174,13 @@ class MateriaMedica extends Component {
   // }
 
 
+
+
   render() {
     const { currentHerb } = this.props;
 
     return (
       <div className="container">
-        {/* TODO - ADD HERB SEARCH BAR AND DROPDOWN SELECT BUTTON*/}
-        {/* <div class="dropdown">
-          <button onClick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <li key={uuid.v4()} >
-              <Link to={`/materia_medica/vitex`}> Vitex </Link>
-            </li>
-          </div>
-        </div> */}
-
 
         <section id="herb-entry">
           <h1 className="large text-primary">{currentHerb.title}</h1>

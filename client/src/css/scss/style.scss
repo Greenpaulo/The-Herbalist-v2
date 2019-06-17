@@ -1,6 +1,7 @@
 @import 'config';
 @import 'utilities';
 @import 'form';
+@import 'dropdown';
 
 // Resets
 * {
@@ -198,7 +199,6 @@ img {
   }
   #leaf-drop {
     max-width: 400px;
-    // background: url('../../images/leaf-drop.jpg')
 
   }
 }
@@ -297,7 +297,10 @@ section#condition-list{
   }
 
   a {
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 

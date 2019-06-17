@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 class Finder extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   onCategorySelect(keyword) {
     this.props.fetchCategory(keyword);
   }
