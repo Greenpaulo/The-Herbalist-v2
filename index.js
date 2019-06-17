@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 
-  // If there is no file in build dir - serve index.html
+  // If there is no file in build dir - serve index.html file
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   })
