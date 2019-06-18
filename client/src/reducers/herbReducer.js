@@ -50,24 +50,30 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_HERB:
       const { payload } = action;
-      return {
-        name: payload.name,
-        title: payload.title,
-        commonName: payload.commonName,
-        family: payload.family,
-        partsUsed: payload.partsUsed,
-        image: payload.image,
-        actionsIndications: payload.actionsIndications,
-        contraIndications: payload.contraIndications,
-        safety: payload.safety,
-        dosage: payload.dosage,
-        botanicalDescription: payload.botanicalDescription,
-        energeticUsage: payload.energeticUsage,
-        constituents: payload.constituents,
-        clinicalTrials: payload.clinicalTrials,
-        pharmacology: payload.pharmacology,
-        externalUsage: payload.externalUsage
+      console.log(payload)
+      if (payload) {
+        return {
+          name: payload.name,
+          title: payload.title,
+          commonName: payload.commonName,
+          family: payload.family,
+          partsUsed: payload.partsUsed,
+          image: payload.image,
+          actionsIndications: payload.actionsIndications,
+          contraIndications: payload.contraIndications,
+          safety: payload.safety,
+          dosage: payload.dosage,
+          botanicalDescription: payload.botanicalDescription,
+          energeticUsage: payload.energeticUsage,
+          constituents: payload.constituents,
+          clinicalTrials: payload.clinicalTrials,
+          pharmacology: payload.pharmacology,
+          externalUsage: payload.externalUsage
+        }
+      } else {
+        return state;
       }
+
     default:
       return state;
   }

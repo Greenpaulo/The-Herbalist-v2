@@ -31,6 +31,7 @@ class App extends Component {
           <Route exact path='/' component={Landing} />
           <Route path='/how_to_use' component={HowToUse} />
           <Route path='/herb_finder' component={Finder} />
+          <Route exact path='/materia_medica' component={MateriaMedica} />
           <Route path='/materia_medica/:herb' component={MateriaMedica} />
           <PrivateRoute path='/dispensary' component={Dispensary} />
           <PrivateRoute path='/cabinet' component={Cabinet} />
