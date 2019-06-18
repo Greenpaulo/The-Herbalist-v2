@@ -20,7 +20,8 @@ class Cabinet extends Component {
   // Delete a medicine from the cabinet
   onDeleteClick(medicine) {
     axios.delete(`/api/medicine?${medicine._id}`)
-    this.props.fetchMedicineList();
+      .then(res => this.props.fetchMedicineList())
+
   };
 
   // Render content based on authentication status
