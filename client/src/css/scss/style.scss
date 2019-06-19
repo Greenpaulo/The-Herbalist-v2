@@ -304,10 +304,28 @@ section#condition-list{
   }
 }
 
+// Dispensary
+#dispensary {
+
+  i {
+    color: $primary-color;
+    margin-right: 1rem;
+  }
+
+  #card-one p {
+    font-weight: 500;
+    margin: 1.7rem 0;
+  }
+
+  .list-group i {
+      margin-top: 0.4rem;
+  }  
+}
+
 
 // Materia Medica
 .action-indication {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   h3 {
     font-size: 1.5rem;
@@ -328,30 +346,59 @@ section#condition-list{
   }
 }
 
-#other-info h3 {
+#other-info {
+  h3 {
   color: $primary-color;
   margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  div {
+    padding-top: 0;
+  }
+
+  #spacer {
+    padding-top: 1rem;
+  }
+}
+
+#herb-select-btns {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $dark-color;
+}
+
+#herb-id {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: 
+    "subs image"
+    "subs image";
+  margin-bottom: 3rem;
+   
+  #herb-title {
+    margin: 0 0 2rem 0;
+    padding-bottom: 2rem;
+  }
+
+  #herb-subtitles {
+    grid-area: subs;
+  }
+
+  #herb-img{
+    img {
+    grid-area: image;
+    max-height: 400px;
+    }
+  } 
 }
 
 
 
 
 
-// Dispensary
-#dispensary {
 
-  i {
-    color: $primary-color;
-    margin-right: 1rem;
-  }
 
-  #card-one p {
-    font-weight: 500;
-    margin: 1.7rem 0;
-  }
-
-  .list-group i {
-      margin-top: 0.4rem;
-  }
-  
-}

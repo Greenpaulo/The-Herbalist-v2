@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
+import { connect } from 'react-redux';
 import '../css/style.css'
+
 import Navbar from './Navbar';
 import HowToUse from './HowToUse';
 import Landing from './Landing';
@@ -9,13 +11,13 @@ import MateriaMedica from './MateriaMedica';
 import Dispensary from './Dispensary'
 import Cabinet from './Cabinet';
 import Edit from './EditMedicine';
-import { connect } from 'react-redux';
+import PrivateRoute from './routing/PrivateRoute';
+import Login from './Login';
 import * as actions from '../actions';
-import PrivateRoute from './routing/PrivateRoute'
+
 
 // Dummy components
 const About = () => <h2>About</h2>
-const Login = () => <h2>Login</h2>
 
 
 class App extends Component {

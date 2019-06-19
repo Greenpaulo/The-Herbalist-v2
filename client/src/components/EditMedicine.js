@@ -337,9 +337,9 @@ class EditMedicine extends Component {
       );
     } else {
       return (
-        <div>
-          <h1>Welcome to the Edit page!</h1>
-          <p>Please choose a prescription from your Medicine Cabinet to edit</p>
+        <div className="container">
+          <h1 className="large text-primary">Welcome to the Edit page!</h1>
+          <p class="lead">Please choose a prescription from your Medicine Cabinet to edit</p>
           <Link to='/cabinet'>Go To Your Medicine Cabinet</Link>
         </div>
       );

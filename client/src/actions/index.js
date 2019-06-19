@@ -58,8 +58,8 @@ export const createMedicine = (history, values) => {
     axios.post('/api/medicine', { values })
       .then(res => {
         dispatch({ type: CREATE_MEDICINE, payload: res.data })
+        history.push('/cabinet');
       })
-    history.push('/cabinet');
   };
 };
 
@@ -83,7 +83,11 @@ export const storeMedicine = (medicine) => {
 export const updateMedicine = (history, medicineID, values) => {
   return dispatch => {
     axios.put('/api/medicine', { medicineID, values })
-      .then(res => dispatch({ type: STORE_MEDICINE, payload: res.data }))
-    history.push('/cabinet');
+      .then(
+        res => {
+          dispatch({ type: STORE_MEDICINE, payload: res.data })
+          history.push('/cabinet');
+        }
+      )
   };
 };

@@ -38,48 +38,47 @@ class MateriaMedica extends Component {
   render() {
     return (
       <div className="container">
-
         <h1 className="large text-primary">Materia Medica</h1>
 
-
-        <h2>Herbs</h2>
-        <div className="dropdown">
-          <button className="dropbtn">A - D</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(0, 14)}
+        <section id="herb-select-btns">
+          <h2 className="lead">Herb Select:</h2>
+          <div className="dropdown">
+            <button className="dropbtn">A - D</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(0, 14)}
+            </div>
           </div>
-        </div>
-
-        <div className="dropdown">
-          <button className="dropbtn">E - H</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(15, 25)}
+          <div className="dropdown">
+            <button className="dropbtn">E - H</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(15, 25)}
+            </div>
           </div>
-        </div>
-        <div className="dropdown">
-          <button className="dropbtn">I - L</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(25, 29)}
+          <div className="dropdown">
+            <button className="dropbtn">I - L</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(25, 29)}
+            </div>
           </div>
-        </div>
-        <div className="dropdown">
-          <button className="dropbtn">M - P</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(29, 40)}
+          <div className="dropdown">
+            <button className="dropbtn">M - P</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(29, 40)}
+            </div>
           </div>
-        </div>
-        <div className="dropdown">
-          <button className="dropbtn">Q - T</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(40, 47)}
+          <div className="dropdown">
+            <button className="dropbtn">Q - T</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(40, 47)}
+            </div>
           </div>
-        </div>
-        <div className="dropdown">
-          <button className="dropbtn">U - Z</button>
-          <div className="dropdown-content">
-            {this.renderHerbSelect(47, 55)}
+          <div className="dropdown">
+            <button className="dropbtn">U - Z</button>
+            <div className="dropdown-content">
+              {this.renderHerbSelect(47, 55)}
+            </div>
           </div>
-        </div>
+        </section>
 
         <HerbEntry />
       </div>

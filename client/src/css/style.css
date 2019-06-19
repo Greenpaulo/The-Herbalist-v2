@@ -556,8 +556,22 @@ section#condition-list a:hover {
   color: #2a7a04;
 }
 
+#dispensary i {
+  color: #2a7a04;
+  margin-right: 1rem;
+}
+
+#dispensary #card-one p {
+  font-weight: 500;
+  margin: 1.7rem 0;
+}
+
+#dispensary .list-group i {
+  margin-top: 0.4rem;
+}
+
 .action-indication {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .action-indication h3 {
@@ -583,16 +597,49 @@ section#condition-list a:hover {
   margin-bottom: 0.5rem;
 }
 
-#dispensary i {
-  color: #2a7a04;
-  margin-right: 1rem;
+#other-info p {
+  margin-bottom: 1rem;
 }
 
-#dispensary #card-one p {
-  font-weight: 500;
-  margin: 1.7rem 0;
+#other-info div {
+  padding-top: 0;
 }
 
-#dispensary .list-group i {
-  margin-top: 0.4rem;
+#other-info #spacer {
+  padding-top: 1rem;
+}
+
+#herb-select-btns {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #282e34;
+}
+
+#herb-id {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+      grid-template-areas: "subs image" "subs image";
+  margin-bottom: 3rem;
+}
+
+#herb-id #herb-title {
+  margin: 0 0 2rem 0;
+  padding-bottom: 2rem;
+}
+
+#herb-id #herb-subtitles {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: subs;
+}
+
+#herb-id #herb-img img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: image;
+  max-height: 400px;
 }

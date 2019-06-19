@@ -110,7 +110,7 @@ class HerbEntry extends Component {
     if (currentHerb.energeticUsage !== null &&
       currentHerb.energeticUsage !== undefined) {
       return (
-        <div className="card-dark">
+        <div className="card-dark" id="traditional-usage">
           <h3>Other Traditional Usage:</h3>
           {this.renderTradition()}
         </div>
@@ -181,18 +181,23 @@ class HerbEntry extends Component {
     return (
       <Fragment>
         <section id="herb-entry">
-          <h1 className="large text-primary">{currentHerb.title}</h1>
-
           <div id="herb-id">
-            <h3 className="subtitle">Common Name: {currentHerb.commonName}</h3>
-            <h3 className="subtitle">Family: {currentHerb.family}</h3>
-            <h3 className="subtitle">Parts Used: {currentHerb.partsUsed}</h3>
-            <img src="" alt="" />
+
+            <div id="herb-subtitles">
+              <h1 id="herb-title" className="medium text-primary">{currentHerb.title}</h1>
+              <h3 className="subtitle">Common Name: {currentHerb.commonName}</h3>
+              <h3 className="subtitle">Family: {currentHerb.family}</h3>
+              <h3 className="subtitle">Parts Used: {currentHerb.partsUsed}</h3>
+            </div>
+            <div id="herb-img">
+              <img src={currentHerb.image} alt="Herb" />
+            </div>
           </div>
 
           {this.renderActionsIndications()}
 
           <section id="other-info">
+            <div id="spacer" className="card-dark"></div>
 
             {this.renderContraIndicationList()}
 
@@ -212,6 +217,7 @@ class HerbEntry extends Component {
             {this.renderExternalUsage()}
 
             {this.renderEnergeticUsage()}
+
           </section>
         </section>
 

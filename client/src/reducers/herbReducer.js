@@ -7,7 +7,7 @@ const initialState = {
   commonName: "Agnus-castus, Chasteberry, Chaste tree",
   family: "Verbenaceae",
   partsUsed: "Dried, ripe fruits",
-  image: "null",
+  image: "../images/herbs/chaste-tree.jpg",
   actionsIndications: [
     {
       actions: "Hormone Balancer, Uterine Tonic",
