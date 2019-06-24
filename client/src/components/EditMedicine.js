@@ -82,6 +82,7 @@ class EditMedicine extends Component {
                   id='patientName'
                   value={patientName}
                   onChange={this.onChange}
+                  required
                 />
               </div>
               <br />
@@ -97,6 +98,7 @@ class EditMedicine extends Component {
                     onClick={this.clearInputField}
                     value={herb1}
                     onChange={this.onChange}
+                    required
                   />
                   <select
                     component='select'
@@ -115,6 +117,7 @@ class EditMedicine extends Component {
                     name='dosage1'
                     value={dosage1}
                     onChange={this.onChange}
+                    required
                   />
                 </label>
               </div>

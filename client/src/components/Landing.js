@@ -13,7 +13,7 @@ class Landing extends Component {
         <div className="pimg1">
           <div className="ptext title">
             <span className="border trans">
-              <Link to="/">The Herbalist</Link>
+              <Link to="/how_to_use">The Herbalist</Link>
             </span>
           </div>
         </div>

@@ -64,11 +64,9 @@ class Home extends Component {
               <p className="">The Medicine Cabinet is where you can safely store all your dispensed medicines. You can change your medicine if you wish, altering the ratios as needed, or adding new herbs as the treatment progresses.</p>
             </div>
           </div>
-
         </section>
 
       </div>
-
     )
   }
 }

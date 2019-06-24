@@ -27,7 +27,7 @@ class Navbar extends Component {
         <ul>
           <li><Link to="/how_to_use">How To Use</Link></li>
           <li><Link to="/herb_finder">Herb Finder</Link></li>
-          <li><Link to="/materia_medica/Yarrow">Materia Medica</Link></li>
+          <li><Link to="/materia_medica">Materia Medica</Link></li>
           <li><Link to="/dispensary">Dispensary</Link></li>
           <li><Link to="/cabinet">Medicine Cabinet</Link></li>
           <li><Link to="/about">About Us</Link></li>

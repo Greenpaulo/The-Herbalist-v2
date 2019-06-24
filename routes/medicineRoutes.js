@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 // Creates an instance of our conditions class (DB collection).
 const Medicine = mongoose.model('medicines');
@@ -7,13 +8,15 @@ module.exports = app => {
 
   // Handle the post requests to make a new medicine/prescription
   app.post('/api/medicine', async (req, res) => {
+    const date = moment().format('Do MMMM YYYY');
+    console.log(date)
     const { values } = req.body;
 
     // Create the new medicine instance - adding the user's ID and date.
     const medicine = new Medicine({
       user: req.user.googleId,
       patientName: values.patientName,
-      date: Date.now(),
+      date: date,
       herbs: [
         { name: values.herb1, dosage: values.dosage1 },
         { name: values.herb2, dosage: values.dosage2 },

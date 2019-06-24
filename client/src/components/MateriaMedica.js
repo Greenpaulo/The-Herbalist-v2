@@ -19,7 +19,7 @@ class MateriaMedica extends Component {
   }
 
   renderHerbSelect = (start, end) => {
-    if (this.props.herbList !== null && this.props.herbList !== undefined) {
+    if (this.props.herbList !== null && this.props.herbList[0].name !== undefined) {
       const { herbList } = this.props;
       const list = herbList.slice(start, end);
       return list.map(herb => {
@@ -45,7 +45,7 @@ class MateriaMedica extends Component {
           <div className="dropdown">
             <button className="dropbtn">A - D</button>
             <div className="dropdown-content">
-              {this.renderHerbSelect(0, 14)}
+              {this.renderHerbSelect(0, 15)}
             </div>
           </div>
           <div className="dropdown">

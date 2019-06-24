@@ -15,7 +15,7 @@ class Finder extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="large text-primary"> Herb Finder </h1>
+        <h1 className="large text-primary" id="herb-finder-title"> Herb Finder </h1>
         <section id="finder-info">
           <div className="list-group">
             <i className="fa fa-search fa-lg"></i>
@@ -63,6 +63,7 @@ class Finder extends Component {
         </section>
 
       </div>
+
     );
   }
 }

@@ -43,7 +43,7 @@ const initialState = {
     "Observation by 153 gynecologists of 551 patients with symptoms of corpus luteal insufficiency, cyclic disorders, or PMS over several menstrual cycles revealed that chaste tree was beneficial in 68.8% of cases. The average dose of chaste tree was equivalent to 36mg/day of dried fruit. Over 80% of patients were relieved of complaints or stated that their condition had improved. (KB)",
     "In a controlled trial of male and female patients with acne, a minimum of 3 months\u2019 treatment with Agnus castus resulted in an improvement for 70% of patients, which was significantly better than placebo. Patients were treated with Agnus castus (equivalent to 36mg/day of dried fruit) for 4 to 6 weeks, followed by a lower dose for 1 to 2 years. The mechanism for the beneficial treatment on acne is not known but may be a result of a mild antiandrogenic effect. (KB)"
   ],
-  externalUsage: []
+  externalUsage: null
 };
 
 export default function (state = initialState, action) {

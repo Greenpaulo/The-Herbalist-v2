@@ -177,6 +177,40 @@ img {
   color:#f4f4f4;
 }
 
+// // Header
+// #HowToUse {
+//   background: url('../images/showcase.jpeg');
+//   background-position: 0% 60%;
+// }
+// #Finder {
+//   background: url('../images/pimg4.jpg');
+//   background-position: 0% 70%;;
+//   background-size: cover;
+// }
+// #MateriaMedica {
+//   background: url('../images/pimg2.jpeg');
+//   background-position: center;
+// }
+// #Dispensary {
+//   background: url('../images/pimg2.jpeg');
+//   background-position: center;
+// }
+// #Cabinet {
+//   background: url('../images/pimg2.jpeg');
+//   background-position: center;
+// }
+// #About {
+//   background: url('../images/pimg2.jpeg');
+//   background-position: center;
+// }
+
+// section.header{
+//   min-height: 400px;
+//   margin-top: 4rem;
+//   background-repeat: no-repeat;
+//   opacity: 0.8;
+//   }
+
 
 // How To Use
 #section1 {
@@ -254,6 +288,9 @@ img {
 
 
 // Herb Finder
+#herb-finder-title{
+  margin-bottom: 4rem;
+}
 section#finder-info {
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -270,17 +307,22 @@ section#finder-info {
 section#condition-selector {
   background-color: $light-color;
   margin: 4rem 0rem 4rem 0;
-
+  
+  
   h2{
     padding: 2rem 2rem 0 2rem;
     margin: 0;
+  
   }
   #buttons {
     background-color: $light-color;
     padding: 2rem;
     
+    
     button {
       margin: 0.8rem;
+      border-radius: 10px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     } 
   }
 }
@@ -319,7 +361,14 @@ section#condition-list{
 
   .list-group i {
       margin-top: 0.4rem;
-  }  
+  }
+
+  #prescription-form {
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 
@@ -369,11 +418,16 @@ section#condition-list{
   margin-bottom: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid $dark-color;
+
+  button {
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
 }
 
 #herb-id {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 40%;
   grid-template-areas: 
     "subs image"
     "subs image";
@@ -391,9 +445,85 @@ section#condition-list{
   #herb-img{
     img {
     grid-area: image;
-    max-height: 400px;
+    height: 350px;
+    width:350px;
+    border-radius: 50%;
     }
   } 
+}
+
+// Cabinet
+.prescription {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-weight: normal;
+    padding: 1rem;
+  }
+
+  .prescription-heading {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+
+  #prescription-table {
+    margin-left: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 75%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    
+    th {
+      text-align: left;
+    }
+
+    th, td {
+      border-bottom: 1px solid darken($light-color, 20%);
+      padding: 0.5rem;
+    }
+
+    tr:hover {
+      background-color: lighten($light-color, 10%);
+    }
+  }
+  
+  .prescription-buttons {
+    padding: 1rem;
+    
+    button {
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+// About
+#contact {
+  margin-top: 4rem;
+}
+
+#about-skills {
+  margin: 3rem 0rem;
+  padding: 1rem 2rem 2rem 2rem;
+
+  i {
+    &.fa-seedling{
+    color: $primary-color;
+    margin-right: 0.5rem;
+    }
+    &.fa-code{
+    color: $dark-color;
+    margin-right: 0.5rem;
+    }
+  }
+
+  h2{
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0.75rem 0 1.75rem 0 ;
+  }
 }
 
 

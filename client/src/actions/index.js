@@ -58,8 +58,17 @@ export const createMedicine = (history, values) => {
     axios.post('/api/medicine', { values })
       .then(res => {
         dispatch({ type: CREATE_MEDICINE, payload: res.data })
-        history.push('/cabinet');
-      })
+        // Add animate bounceOutRight
+        const form = document.querySelector('#prescription-form');
+        form.classList.add('animated', 'bounceOutRight', 'faster');
+        console.log(form.classList);
+        // Redirect to cabinet when annimation ends
+        setTimeout(() => {
+          history.push('/cabinet')
+        },
+          500
+        )
+      });
   };
 };
 

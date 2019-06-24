@@ -19,9 +19,13 @@ class Cabinet extends Component {
 
   // Delete a medicine from the cabinet
   onDeleteClick(medicine) {
-    axios.delete(`/api/medicine?${medicine._id}`)
-      .then(res => this.props.fetchMedicineList())
-
+    // Add animate bounceOutRight
+    const form = document.querySelector(`#rx-${medicine._id}`);
+    form.classList.add('animated', 'fadeOut');
+    setTimeout(() => {
+      axios.delete(`/api/medicine?${medicine._id}`)
+        .then(res => this.props.fetchMedicineList())
+    }, 1000);
   };
 
 
@@ -31,32 +35,64 @@ class Cabinet extends Component {
       const { medicines } = this.props;
 
       return medicines.map(medicine => {
+        console.log(medicine);
         return (
-          <div className="card" key={uuid.v4()}>
-            <h3>Date: {medicine.date}</h3>
-            <h3>Patient Name: {medicine.patientName}</h3>
+          <div className="card prescription" id={`rx-${medicine._id}`} key={uuid.v4()}>
+            <h3>
+              <span className="prescription-heading">Date:</span>{medicine.date}
+            </h3>
+            <h3>
+              <span className="prescription-heading">Patient Name:</span>{medicine.patientName}
+            </h3>
 
-            {this.renderHerbAndDosage(medicine)}
+            {/* <div id="herbs-dosages">
+              <div>
+                {this.renderHerbs(medicine)}
+              </div>
+              <div>
+                {this.renderDosages(medicine)}
+              </div>
+            </div> */}
 
-            <p>Notes: {medicine.notes}</p>
-            <button className="btn btn-dark" onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
-            <button className="btn btn-danger" onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
+            <table id="prescription-table" className="my-1">
+              <thead>
+                <tr>
+                  <th>Herb</th>
+                  <th>Dosage (ml)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.renderHerbsAndDosages(medicine)}
+              </tbody>
+            </table>
+
+            <h3>Notes:  {medicine.notes}</h3>
+            <div className="prescription-buttons">
+              <button className="btn btn-dark" onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
+              <button className="btn btn-danger" onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
+            </div>
           </div>
         )
       })
     }
   }
 
-  renderHerbAndDosage(medicine) {
+  renderHerbsAndDosages(medicine) {
     return medicine.herbs.map(herb => {
       if (herb.dosage !== '') {
-        return <h3 key={uuid.v4()}>Herb: {herb.name}  Dosage: {herb.dosage}</h3>
+        return (
+          <tr key={uuid.v4()}>
+            <td>{herb.name}</td>
+            <td>{herb.dosage}</td>
+          </ tr>
+        )
       }
       else {
         return null;
       }
     })
   }
+
 
   render() {
     return (

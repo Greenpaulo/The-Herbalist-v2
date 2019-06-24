@@ -504,6 +504,10 @@ img {
   color: #2a7a04;
 }
 
+#herb-finder-title {
+  margin-bottom: 4rem;
+}
+
 section#finder-info {
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -534,6 +538,9 @@ section#condition-selector #buttons {
 
 section#condition-selector #buttons button {
   margin: 0.8rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 section#condition-list h2 {
@@ -568,6 +575,14 @@ section#condition-list a:hover {
 
 #dispensary .list-group i {
   margin-top: 0.4rem;
+}
+
+#dispensary #prescription-form {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .action-indication {
@@ -615,11 +630,17 @@ section#condition-list a:hover {
   border-bottom: 1px solid #282e34;
 }
 
+#herb-select-btns button {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 #herb-id {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
       grid-template-areas: "subs image" "subs image";
   margin-bottom: 3rem;
 }
@@ -641,5 +662,77 @@ section#condition-list a:hover {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: image;
-  max-height: 400px;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+}
+
+.prescription {
+  margin-bottom: 2rem;
+}
+
+.prescription h3 {
+  font-weight: normal;
+  padding: 1rem;
+}
+
+.prescription .prescription-heading {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.prescription #prescription-table {
+  margin-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 75%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+.prescription #prescription-table th {
+  text-align: left;
+}
+
+.prescription #prescription-table th, .prescription #prescription-table td {
+  border-bottom: 1px solid #c1c1c1;
+  padding: 0.5rem;
+}
+
+.prescription #prescription-table tr:hover {
+  background-color: white;
+}
+
+.prescription .prescription-buttons {
+  padding: 1rem;
+}
+
+.prescription .prescription-buttons button {
+  margin-right: 1rem;
+}
+
+#contact {
+  margin-top: 4rem;
+}
+
+#about-skills {
+  margin: 3rem 0rem;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+#about-skills i.fa-seedling {
+  color: #2a7a04;
+  margin-right: 0.5rem;
+}
+
+#about-skills i.fa-code {
+  color: #282e34;
+  margin-right: 0.5rem;
+}
+
+#about-skills h2 {
+  margin-bottom: 0.5rem;
+}
+
+#about-skills p {
+  margin: 0.75rem 0 1.75rem 0;
 }

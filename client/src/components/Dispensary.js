@@ -70,7 +70,7 @@ class Dispensary extends Component {
               <i className="fas fa-prescription fa-3x"></i>
               <div className="form-group">
                 <label htmlFor="patientName">Patient Name</label><br />
-                <Field type="text" name="patientName" placeholder="Enter name..." id="patientName" />
+                <Field type="text" name="patientName" placeholder="Enter name..." id="patientName" required />
               </div>
 
               <div className="form-group">
@@ -83,7 +83,7 @@ class Dispensary extends Component {
                 </label>
                 <label htmlFor="dosage1">
                   Dosage (ml)
-                  <Field type="number" name="dosage1" />
+                  <Field type="number" name="dosage1" required />
                 </label>
               </div>
 
