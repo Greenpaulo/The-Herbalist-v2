@@ -15,7 +15,7 @@ class Finder extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="large text-primary" id="herb-finder-title"> Herb Finder </h1>
+        <h1 className="x-large text-primary animated fadeInDown" id="herb-finder-title"> Herb Finder </h1>
         <section id="finder-info">
           <div className="list-group">
             <i className="fa fa-search fa-lg"></i>
@@ -32,29 +32,29 @@ class Finder extends Component {
 
 
         <section id="condition-selector">
-          <h2 className="lead"> List of Conditions</h2>
+          <h2 className="medium"> List of Conditions</h2>
           <div id="buttons">
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'mental')} className='btn btn-primary'> Mental/Emotional</button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'mental')} className='btn btn-primary shadow'> Mental/Emotional</button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'skin')} className='btn btn-primary'> Skin </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'skin')} className='btn btn-primary shadow'> Skin </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'joints')} className='btn btn-primary'> Joints/Muscles </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'joints')} className='btn btn-primary shadow'> Joints/Muscles </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'digestion')} className='btn btn-primary'> Digestion </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'digestion')} className='btn btn-primary shadow'> Digestion </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'throat')} className='btn btn-primary'> Throat/Chest </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'throat')} className='btn btn-primary shadow'> Throat/Chest </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'bladder')} className='btn btn-primary'> Bladder/Urinary </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'bladder')} className='btn btn-primary shadow'> Bladder/Urinary </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'heart')} className='btn btn-primary'> Heart/Circulation </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'heart')} className='btn btn-primary shadow'> Heart/Circulation </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'head')} className='btn btn-primary'> Head </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'head')} className='btn btn-primary shadow'> Head </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'womens')} className='btn btn-primary'> Women's Health </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'womens')} className='btn btn-primary shadow'> Women's Health </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'mens')} className='btn btn-primary'> Men's Health </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'mens')} className='btn btn-primary shadow'> Men's Health </button>
 
-            <button type='button' onClick={this.onCategorySelect.bind(this, 'children')} className='btn btn-primary'> Children/Babies </button>
+            <button type='button' onClick={this.onCategorySelect.bind(this, 'children')} className='btn btn-primary shadow'> Children/Babies </button>
           </div>
         </section>
 

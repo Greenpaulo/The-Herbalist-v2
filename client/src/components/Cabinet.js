@@ -68,8 +68,8 @@ class Cabinet extends Component {
 
             <h3>Notes:  {medicine.notes}</h3>
             <div className="prescription-buttons">
-              <button className="btn btn-dark" onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
-              <button className="btn btn-danger" onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
+              <button id="edit-btn" className="btn btn-dark" onClick={this.onEditClick.bind(this, medicine)}>Edit</button>
+              <button id="delete-btn" className="btn btn-danger" onClick={this.onDeleteClick.bind(this, medicine)}>Delete</button>
             </div>
           </div>
         )
@@ -97,8 +97,8 @@ class Cabinet extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="large text-primary">Medicine Cabinet</h1>
-        <p className="lead">Here you'll find all your previously dispensed medicines!</p>
+        <h1 className="x-large text-primary animated fadeInDown">Medicine Cabinet</h1>
+        <p className="medium">Here you'll find all your previously dispensed medicines!</p>
         {this.renderMedicines()}
       </div>
     )

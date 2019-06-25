@@ -10,10 +10,10 @@ class Landing extends Component {
     return (
       <Fragment>
 
-        <div className="pimg1">
+        <div className="pimg1 animated fadeIn slow">
           <div className="ptext title">
             <span className="border trans">
-              <Link to="/how_to_use">The Herbalist</Link>
+              <Link to="/how_to_use" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
             </span>
           </div>
         </div>

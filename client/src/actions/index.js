@@ -61,7 +61,6 @@ export const createMedicine = (history, values) => {
         // Add animate bounceOutRight
         const form = document.querySelector('#prescription-form');
         form.classList.add('animated', 'bounceOutRight', 'faster');
-        console.log(form.classList);
         // Redirect to cabinet when annimation ends
         setTimeout(() => {
           history.push('/cabinet')

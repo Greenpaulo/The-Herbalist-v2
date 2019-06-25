@@ -8,29 +8,23 @@
 }
 
 .x-large {
-  font-size: 4rem;
-  line-height: 1.2rem;
-  margin-bottom: 3rem 0;
-}
-
-.large {
   font-size: 3rem;
   line-height: 1.2rem;
   margin: 2.7rem 0 3.5rem;
 }
 
-.medium {
+.large {
   font-size: 2.5rem;
   margin: 2rem 0;
 }
 
-.lead {
+.medium {
   font-size: 1.55rem;
   line-height: 1.7em;
   margin: 2rem 0;
 }
 
-.subtitle {
+.lead {
   font-size: 1.3rem;
   line-height: 1.7em;
   margin: 1.5rem 0;
@@ -91,6 +85,12 @@
 
 .card-dark p {
   font-size: 1.2rem;
+}
+
+.shadow {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .list-group {
@@ -337,7 +337,7 @@ img {
 
 .pimg1, .pimg2, .pimg3 {
   position: relative;
-  opacity: 0.70;
+  opacity: 0.70 !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -357,6 +357,11 @@ img {
 .pimg1 {
   background-image: url("../images/pimg1.jpeg");
   min-height: 100vh;
+}
+
+.pimg1 #landing-logo {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .pimg2 {
@@ -449,7 +454,7 @@ img {
 }
 
 #section3 {
-  margin-top: 6rem;
+  margin: 6rem 0 3rem 0;
 }
 
 #section3 h2 {
@@ -538,9 +543,6 @@ section#condition-selector #buttons {
 
 section#condition-selector #buttons button {
   margin: 0.8rem;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 section#condition-list h2 {
@@ -578,9 +580,6 @@ section#condition-list a:hover {
 }
 
 #dispensary #prescription-form {
-  border-radius: 10px;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   padding: 2rem;
   margin-bottom: 2rem;
 }
@@ -627,13 +626,13 @@ section#condition-list a:hover {
 #herb-select-btns {
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #282e34;
+  border-bottom: 2px solid #a3aeb8;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
-#herb-select-btns button {
-  border-radius: 10px;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+#herb-entry {
+  margin-top: 5rem;
 }
 
 #herb-id {
@@ -667,8 +666,18 @@ section#condition-list a:hover {
   border-radius: 50%;
 }
 
+#reference-button {
+  display: block;
+  width: 100%;
+  margin: 1rem auto 1rem auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .prescription {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  border: 1px solid #dde1e4;
 }
 
 .prescription h3 {
@@ -708,10 +717,23 @@ section#condition-list a:hover {
 
 .prescription .prescription-buttons button {
   margin-right: 1rem;
+  border-radius: 10px;
+}
+
+.prescription .prescription-buttons #edit-btn:hover {
+  background-color: #6b7b8a;
+}
+
+.prescription .prescription-buttons #delete-btn:hover {
+  background-color: black;
 }
 
 #contact {
   margin-top: 4rem;
+}
+
+#contact h2 {
+  margin-bottom: 0rem;
 }
 
 #about-skills {
@@ -735,4 +757,39 @@ section#condition-list a:hover {
 
 #about-skills p {
   margin: 0.75rem 0 1.75rem 0;
+}
+
+.contact-info {
+  margin: 0 0 0 1rem;
+}
+
+#sign-up #lock {
+  cursor: pointer;
+}
+
+#sign-up #login-reason {
+  max-width: 550px;
+}
+
+#sign-up #sign-up-btn {
+  margin: 1rem 0;
+}
+
+#sign-up #login-link {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#sign-up #login-link:hover {
+  color: #194902;
+}
+
+#reference-list {
+  margin-top: 5rem;
+  padding: 2.7rem 3rem;
+}
+
+#reference-list li {
+  padding: 1rem 0;
+  font-size: 1.2rem;
 }

@@ -183,13 +183,13 @@ class HerbEntry extends Component {
         <section id="herb-entry">
           <div id="herb-id">
 
-            <div id="herb-subtitles">
-              <h1 id="herb-title" className="medium text-primary">{currentHerb.title}</h1>
+            <div id="herb-subtitles" className="animated fadeInLeft delay-1s">
+              <h1 id="herb-title" className="large text-primary">{currentHerb.title}</h1>
               <h3 className="subtitle">Common Name: {currentHerb.commonName}</h3>
               <h3 className="subtitle">Family: {currentHerb.family}</h3>
               <h3 className="subtitle">Parts Used: {currentHerb.partsUsed}</h3>
             </div>
-            <div id="herb-img">
+            <div id="herb-img" className="animated fadeInRight delay-1s">
               <img src={currentHerb.image} alt="Herb" />
             </div>
           </div>

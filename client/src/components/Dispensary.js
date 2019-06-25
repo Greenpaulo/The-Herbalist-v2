@@ -30,19 +30,19 @@ class Dispensary extends Component {
       <Fragment>
 
         <section className="container" id="dispensary">
-          <h1 className="large text-primary">Dispensary</h1>
+          <h1 className="x-large text-primary animated fadeInDown">Dispensary</h1>
 
-          <p className="lead">Here in the dispensary you can create herbal prescriptions for yourself, friends and family</p>
+          <p className="medium">Here in the dispensary you can create herbal prescriptions for yourself, friends and family</p>
 
           <div className="card" id="card-one">
-            <p><i className="fas fa-leaf fa-lg"></i>   Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
+            <p><i className="fas fa-leaf fa-lg"></i>Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
             <p><i className="fas fa-flask fa-lg"></i>   You can then save your newly created medicines in the medicine cabinet for future usage</p>
             <p><i className="fas fa-exclamation-circle fa-lg"></i><strong>IMPORTANT :</strong> Please make sure you follow the dosage restrictions in the herb's materia medica entry.</p>
           </div>
           <br />
 
 
-          <p className="lead">Tips For Prescribing</p>
+          <p className="medium">Tips For Prescribing</p>
 
           <div className="card" id="card-two">
             <div className="list-group">
@@ -62,10 +62,10 @@ class Dispensary extends Component {
           </div>
           <br />
 
-          <p className="lead">Prescription</p>
+          <p className="medium">Prescription</p>
 
           {/* Form to add herbs to a prescription */}
-          <div className="card" id="prescription-form">
+          <div className="card shadow" id="prescription-form">
             <Form className="form">
               <i className="fas fa-prescription fa-3x"></i>
               <div className="form-group">

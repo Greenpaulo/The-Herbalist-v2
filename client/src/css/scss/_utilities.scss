@@ -10,29 +10,23 @@
 
 // Text styles
 .x-large {
-  font-size: 4rem;
-  line-height: 1.2rem;
-  margin-bottom: 3rem 0;
-}
-
-.large {
   font-size: 3rem;
   line-height: 1.2rem;
   margin: 2.7rem 0 3.5rem;
 }
 
-.medium {
+.large {
   font-size: 2.5rem;
   margin: 2rem 0;
 }
 
-.lead {
+.medium {
   font-size: 1.55rem;
   line-height: 1.7em;
   margin: 2rem 0;
 }
 
-.subtitle {
+.lead {
   font-size: 1.3rem;
   line-height: 1.7em;
   margin: 1.5rem 0;
@@ -97,6 +91,12 @@
   p {
     font-size: 1.2rem;
   }
+}
+
+// Box shadow
+.shadow {
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
 }
 
 // List Group
