@@ -2,19 +2,41 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 class Landing extends Component {
+  state = {
+    scrolled: false
+  }
   componentDidMount() {
     window.scrollTo(0, 0);
+    if (this.state.scrolled === false) {
+      window.addEventListener('scroll', this.handleScroll);
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    console.log('scrolled')
+    const chevron = document.querySelector('#scrollDown');
+    setTimeout(() => {
+      chevron.classList.add('fadeOut', 'animated');
+    }, 1000);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
     return (
       <Fragment>
 
-        <div className="pimg1 animated fadeIn slow">
+        <div className="pimg1 animated fadeInLanding slow">
           <div className="ptext title">
             <span className="border trans">
               <Link to="/how_to_use" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
             </span>
+          </div>
+          <div id="scrollDown">
+            <i className="fas fa-chevron-down fa-5x scrollDownAnimate"></i>
           </div>
         </div>
 

@@ -7,21 +7,25 @@ class Login extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-  }
-
-  onLockClick = () => {
-    console.log('clicked');
-    // Animate the lock
-    const lock = document.querySelector('#lock');
-    lock.classList.remove('animated', 'shake');
-    this.setState({ lockClicked: !this.state.lockClicked })
     setTimeout(() => {
+      const lock = document.querySelector('#lock');
       lock.classList.add('animated', 'shake');
-      this.setState({ lockClicked: !this.state.lockClicked })
-      console.log(this.state)
-    }, 100);
-
+    }, 2000)
   }
+
+  // onLockClick = () => {
+  //   console.log('clicked');
+  //   // Animate the lock
+  //   // const lock = document.querySelector('#lock');
+  //   // lock.classList.remove('animated', 'shake');
+  //   // this.setState({ lockClicked: !this.state.lockClicked })
+  //   // setTimeout(() => {
+  //   //   lock.classList.add('animated', 'shake');
+  //   //   this.setState({ lockClicked: !this.state.lockClicked })
+  //   //   console.log(this.state)
+  // }, 1000);
+
+  // }
 
   render() {
     return (

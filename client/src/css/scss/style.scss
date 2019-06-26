@@ -93,7 +93,7 @@ img {
 
 .pimg1, .pimg2, .pimg3{
   position: relative;
-  opacity: 0.70 !important;
+  opacity: 0.70;
   background-position:center;
   background-size: cover;
   background-repeat:no-repeat;
@@ -101,7 +101,7 @@ img {
 
   a {
     color: #000;
-    transition: all 0.2s ease-in;
+    transition: all 0.4s ease-in;
 
     &:hover {
       color: $primary-color;
@@ -115,6 +115,18 @@ img {
 
   #landing-logo {
     animation-duration: 4s;
+  }
+
+  #scrollDown {
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    left: 0%;
+    right: 0%;
+    bottom: 2vh;
+    i {
+      color: $light-color;
+    }
   }
 }
 
@@ -520,12 +532,12 @@ section#condition-list{
 
     #edit-btn {
       &:hover {
-        background-color: lighten($dark-color, 30%);
+        background-color: lighten($dark-color, 10%);
       }
     }
     #delete-btn {
       &:hover {
-        background-color: darken(red, 80%);
+        background-color: darken(red, 10%);
       }
     }
   }
@@ -538,6 +550,12 @@ section#condition-list{
 
   h2 {
     margin-bottom: 0rem;
+  }
+
+  a {
+    &:hover {
+      animation: glow 1s ease-in-out infinite alternate;
+    }
   }
 }
 
@@ -572,6 +590,7 @@ section#condition-list{
 #sign-up {
   #lock {
     cursor: pointer;
+    margin-right: 1rem;
   }
   
   #login-reason {
