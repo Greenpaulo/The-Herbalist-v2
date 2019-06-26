@@ -15,8 +15,12 @@ class Login extends Component {
     const lock = document.querySelector('#lock');
     lock.classList.remove('animated', 'shake');
     this.setState({ lockClicked: !this.state.lockClicked })
-    lock.classList.add('animated', 'shake');
-    console.log(this.state)
+    setTimeout(() => {
+      lock.classList.add('animated', 'shake');
+      this.setState({ lockClicked: !this.state.lockClicked })
+      console.log(this.state)
+    }, 100);
+
   }
 
   render() {

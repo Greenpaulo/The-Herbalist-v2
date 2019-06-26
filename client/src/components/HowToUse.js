@@ -12,7 +12,7 @@ class Home extends Component {
 
         <h1 className="x-large text-primary animated fadeInDown">What is Herbal Medicine?</h1>
 
-        <section id="section1">
+        <section id="section1" className="animated fadeIn delay-custom1">
           <p className="lead">Herbal Medicine is the use of plants to heal our body, mind and spirit. There are several types of
           herbal medicine used by a herbalist including herbal teas, tinctures, creams and essences. Teas,
           tinctures and creams help our physical body to heal and relax the mind. Plant Essences work with our
@@ -20,7 +20,7 @@ class Home extends Component {
         </section>
 
         <section id="section2">
-          <div id="info" className="animated fadeInLeft">
+          <div id="info" className="animated fadeInLeft delay-custom2">
             <p id="para1" className="bg-light">There is a lot more to healing than is currently practised in our healthcare system. Real healing goes
             way beyond the physical. By using plants to heal us we can begin to understand the power of the mind and
               our role in healing our own bodies and lives.</p>
@@ -32,7 +32,7 @@ class Home extends Component {
             control of our health and our lives, we see that we can create anything we want in our life. Ultimately
               this power is our birthright.</p>
           </div>
-          <img className="animated fadeInRight" id="leaf-drop" src="./images/leaf-drop.jpg" alt="Medicine bottle" />
+          <img className="animated fadeInRight delay-custom2" id="leaf-drop" src="./images/leaf-drop.jpg" alt="Medicine bottle" />
         </section>
 
 

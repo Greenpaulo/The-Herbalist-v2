@@ -40,7 +40,7 @@ class MateriaMedica extends Component {
       <div className="container">
         <h1 className="x-large text-primary animated fadeInDown">Materia Medica</h1>
 
-        <section id="herb-select-btns" className="animated fadeIn">
+        <section id="herb-select-btns" className="animated fadeIn delay-custom1">
           <h2 className="medium">Herb Select:</h2>
           <div className="dropdown">
             <button className="dropbtn shadow">A - D</button>

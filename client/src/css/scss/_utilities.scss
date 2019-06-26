@@ -51,6 +51,19 @@
   margin-bottom: 2.5rem;
 }
 
+//Padding
+.p-1 {
+  padding:1rem;
+}
+
+.p-1.5 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem
+}
+
 // Text Colours
 .text-primary {
   color: $primary-color;
@@ -161,7 +174,14 @@
   &:hover {
     background: lighten($dark-color, 20%);
     color: #fff;
-  }
-  
-  
+  } 
+}
+
+// Animation delays
+.delay-custom1 {
+  animation-delay: 0.4s;
+}
+
+.delay-custom2 {
+  animation-delay: 0.6s;
 }

@@ -16,7 +16,7 @@ class ConditionList extends Component {
     if (this.props.conditions !== undefined) {
       return this.props.conditions.map((condition) => {
         return (
-          <div className="card condition" key={uuid.v4()}>
+          <div className="card condition animated fadeIn" key={uuid.v4()}>
             <h2 className="lead">{condition.title}</h2>
             {this.renderHerbs(condition)}
           </div>
@@ -36,7 +36,7 @@ class ConditionList extends Component {
   render() {
     return (
       <Fragment>
-        <h2 className="medium">{this.props.category}</h2>
+        <h2 className="medium animated fadeIn">{this.props.category}</h2>
         {this.renderConditions()}
       </Fragment>
     )

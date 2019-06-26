@@ -21,11 +21,12 @@ class Cabinet extends Component {
   onDeleteClick(medicine) {
     // Add animate bounceOutRight
     const form = document.querySelector(`#rx-${medicine._id}`);
-    form.classList.add('animated', 'fadeOut');
+    // form.classList.add('animated', 'fadeOut');
+    form.classList.add('slide-out-elliptic-top-bck');
     setTimeout(() => {
       axios.delete(`/api/medicine?${medicine._id}`)
         .then(res => this.props.fetchMedicineList())
-    }, 1000);
+    }, 500);
   };
 
 
@@ -35,9 +36,8 @@ class Cabinet extends Component {
       const { medicines } = this.props;
 
       return medicines.map(medicine => {
-        console.log(medicine);
         return (
-          <div className="card prescription" id={`rx-${medicine._id}`} key={uuid.v4()}>
+          <div className="card prescription animated fadeInUp delay-custom2" id={`rx-${medicine._id}`} key={uuid.v4()}>
             <h3>
               <span className="prescription-heading">Date:</span>{medicine.date}
             </h3>
@@ -96,9 +96,9 @@ class Cabinet extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" id="cabinet">
         <h1 className="x-large text-primary animated fadeInDown">Medicine Cabinet</h1>
-        <p className="medium">Here you'll find all your previously dispensed medicines!</p>
+        <p className="medium animated fadeIn delay-custom1">Here you'll find all your previously dispensed medicines!</p>
         {this.renderMedicines()}
       </div>
     )

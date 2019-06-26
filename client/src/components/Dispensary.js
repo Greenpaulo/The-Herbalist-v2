@@ -32,9 +32,9 @@ class Dispensary extends Component {
         <section className="container" id="dispensary">
           <h1 className="x-large text-primary animated fadeInDown">Dispensary</h1>
 
-          <p className="medium">Here in the dispensary you can create herbal prescriptions for yourself, friends and family</p>
+          <p className="medium animated fadeIn delay-custom1">Here in the dispensary you can create herbal prescriptions for yourself, friends and family</p>
 
-          <div className="card" id="card-one">
+          <div className="card animated fadeIn delay-custom1" id="card-one">
             <p><i className="fas fa-leaf fa-lg"></i>Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
             <p><i className="fas fa-flask fa-lg"></i>   You can then save your newly created medicines in the medicine cabinet for future usage</p>
             <p><i className="fas fa-exclamation-circle fa-lg"></i><strong>IMPORTANT :</strong> Please make sure you follow the dosage restrictions in the herb's materia medica entry.</p>
@@ -42,9 +42,9 @@ class Dispensary extends Component {
           <br />
 
 
-          <p className="medium">Tips For Prescribing</p>
+          <p className="medium animated fadeIn delay-custom2">Tips For Prescribing</p>
 
-          <div className="card" id="card-two">
+          <div className="card animated fadeIn delay-custom2" id="card-two">
             <div className="list-group">
               <i className="fas fa-clipboard-check fa-lg"></i>
               <p> Try to focus on one or two problems to treat at a time. This will make a more focused prescription and increase the effectiveness of the treatment</p>

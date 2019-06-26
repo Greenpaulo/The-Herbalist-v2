@@ -16,7 +16,7 @@ class Finder extends Component {
     return (
       <div className="container">
         <h1 className="x-large text-primary animated fadeInDown" id="herb-finder-title"> Herb Finder </h1>
-        <section id="finder-info">
+        <section id="finder-info" className="animated fadeIn delay-custom1">
           <div className="list-group">
             <i className="fa fa-search fa-lg"></i>
             <p> Find your condition in the list below to see which herbs are traditionally used to help your condition. This will give you the links to the herb's Materia Medica entry.</p>
@@ -31,7 +31,7 @@ class Finder extends Component {
 
 
 
-        <section id="condition-selector">
+        <section id="condition-selector" className="animated fadeIn delay-custom2">
           <h2 className="medium"> List of Conditions</h2>
           <div id="buttons">
             <button type='button' onClick={this.onCategorySelect.bind(this, 'mental')} className='btn btn-primary shadow'> Mental/Emotional</button>

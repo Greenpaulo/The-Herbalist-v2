@@ -5,16 +5,19 @@ const About = () => {
     <div className="container">
       <div id="about-intro" className="my-2">
         <h1 className="x-large text-primary animated fadeInDown">About Us</h1>
-        <h2 className="medium text-dark">Hello, I'm Paul!</h2>
-        <p className="lead">This app was created by Paul Bingham, a Web Developer and Herbalist!</p>
+        <h2 className="medium text-dark animated bounceInLeft">Hello, I'm Paul!</h2>
+        <p className="lead animated bounceInRight">This app was created by Paul Bingham, a Web Developer and Herbalist!</p>
 
-        <div className="card" id="about-skills">
+        <div id="about-skills">
+          <div className="bg-light animated bounceInLeft p-1 my-1 shadow">
+            <h2 className="medium text-dark my-1"><i className="fas fa-code"></i>  I'm a Web Developer</h2>
+            <p className="lead">I'm a self taught full-stack junior Web Developer. This app was built after 10 months of study, using React/Redux, Node/Express, MongoDB and custom CSS.</p>
+          </div>
 
-          <h2 className="medium text-dark"><i className="fas fa-code"></i>  I'm a Web Developer</h2>
-          <p className="lead">I'm a self taught full-stack junior Web Developer. This app was built after 10 months of study, using React/Redux, Node/Express, MongoDB and custom CSS.</p>
-
-          <h2 className="medium text-dark"><i className="fas fa-seedling"></i>  I'm a Herbalist</h2>
-          <p className="lead">With a first-class honours degree in Herbal Medicine, I'm also a fully-qualified Herbalist. </p>
+          <div className="bg-light animated bounceInRight p-1 my-1 shadow">
+            <h2 className="medium text-dark my-1"><i className="fas fa-seedling"></i>  I'm a Herbalist</h2>
+            <p className="lead">With a first-class honours degree in Herbal Medicine, I'm also a fully-qualified Herbalist. </p>
+          </div>
 
         </div>
       </div>

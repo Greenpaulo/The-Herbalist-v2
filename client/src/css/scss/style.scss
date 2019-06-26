@@ -2,6 +2,7 @@
 @import 'utilities';
 @import 'form';
 @import 'dropdown';
+@import 'animations';
 
 // Resets
 * {
@@ -223,7 +224,7 @@ img {
 
 #section2 {
   display: flex;
-  background-color: $light-color;
+  
   
   #info {
     p {
@@ -232,12 +233,14 @@ img {
       line-height: 2rem;
     }
     #para1 {
-      margin-top: 1.5rem;
+      padding-top:3.5rem;
+    }
+    #para2 {
+      padding-bottom: 3.5rem;
     }
   }
   #leaf-drop {
     max-width: 400px;
-
   }
 }
 
@@ -312,7 +315,6 @@ section#condition-selector {
   background-color: $light-color;
   margin: 4rem 0rem 4rem 0;
   
-  
   h2{
     padding: 2rem 2rem 0 2rem;
     margin: 0;
@@ -345,29 +347,6 @@ section#condition-list{
     &:hover {
       color: $primary-color;
     }
-  }
-}
-
-// Dispensary
-#dispensary {
-
-  i {
-    color: $primary-color;
-    margin-right: 1rem;
-  }
-
-  #card-one p {
-    font-weight: 500;
-    margin: 1.7rem 0;
-  }
-
-  .list-group i {
-      margin-top: 0.4rem;
-  }
-
-  #prescription-form {
-    padding: 2rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -418,11 +397,19 @@ section#condition-list{
   margin-bottom: 3rem;
   padding-bottom: 3rem;
   border-bottom: 2px solid lighten($dark-color, 50%);
-  animation-delay: 0.7s
+  z-index: 1;
+  position: relative;
+}
+
+.dropdown {
+  z-index: 1;
+  position: relative;
 }
 
 #herb-entry {
   margin-top: 5rem;
+  z-index:0;
+  position: relative;
 }
 
 #herb-id {
@@ -459,6 +446,32 @@ section#condition-list{
   border-radius: 10px;
   text-align: center;
 } 
+
+// Dispensary
+#dispensary {
+
+  i {
+    color: $primary-color;
+    margin-right: 1rem;
+  }
+
+  #card-one {
+    p {
+    font-weight: 500;
+    margin: 1.7rem 0;
+    }
+  }
+
+  .list-group i {
+      margin-top: 0.4rem;
+  }
+
+  #prescription-form {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 
 // Cabinet
 .prescription {
@@ -530,7 +543,6 @@ section#condition-list{
 
 #about-skills {
   margin: 3rem 0rem;
-  padding: 1rem 2rem 2rem 2rem;
 
   i {
     &.fa-seedling{
@@ -571,11 +583,30 @@ section#condition-list{
   }
   
   #login-link {
+    margin-left: 0.7rem;
     transition: all 0.2s ease-in;
+    position: absolute;
 
     &:hover {
     color: darken($primary-color, 10%);
+
+      &::after {
+        animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+      }
     }
+
+    &::after {
+      border-radius: 1em;
+      border-top: .1em solid $primary-color;
+      content:"";
+      position: absolute;
+        right: 100%;
+        bottom: .14em;
+        left: 0;
+      transition: right .4s cubic-bezier(0,.5,0,1);
+    }
+
+    
   }
 }
 
