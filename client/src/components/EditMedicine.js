@@ -28,8 +28,8 @@ class EditMedicine extends Component {
 
   // Fetch the list of herbs for the herb select
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchHerbList();
-    console.log(this.props);
   }
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -69,7 +69,7 @@ class EditMedicine extends Component {
       } = this.state;
       return (
         <div className="container">
-          <div className="card">
+          <div className="card animated fadeInUp" id="edit-form">
             {/* Edit Form */}
             <form onSubmit={this.onUpdateSubmit} className="form">
               <div>
@@ -341,9 +341,9 @@ class EditMedicine extends Component {
     } else {
       return (
         <div className="container">
-          <h1 className="large text-primary">Welcome to the Edit page!</h1>
-          <p class="lead">Please choose a prescription from your Medicine Cabinet to edit</p>
-          <Link to='/cabinet'>Go To Your Medicine Cabinet</Link>
+          <h1 className="large text-primary animated fadeInDown">Welcome to the Edit page!</h1>
+          <p className="lead animated fadeIn delay-custom1">Please choose a prescription from your Medicine Cabinet to edit</p>
+          <Link to='/cabinet' className="animated fadeIn delay-custom2 animated-link">Go To Your Medicine Cabinet</Link>
         </div>
       );
     }

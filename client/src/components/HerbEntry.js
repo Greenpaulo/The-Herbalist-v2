@@ -15,7 +15,7 @@ class HerbEntry extends Component {
     if (currentHerb.actionsIndications !== undefined) {
       return currentHerb.actionsIndications.map((actInd) => {
         return (
-          <div className="action-indication card" key={uuid.v4()}>
+          <div className="action-indication card animated fadeIn delay-custom4" key={uuid.v4()}>
             <div className="actions">
               <h3 className="my-1.5">Actions:</h3>
               <h4>{actInd.actions}</h4>

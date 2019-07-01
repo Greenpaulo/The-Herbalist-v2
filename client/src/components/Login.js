@@ -35,7 +35,7 @@ class Login extends Component {
           <p className="lead">In order to save your prescriptions - please Sign up/Login in with Google to use the Dispensary and Medicine Cabinet</p>
         </div>
         <a className="btn btn-primary shadow" id="sign-up-btn" href="/auth/google">Sign Up with Google</a>
-        <p className="lead">Already have an account? <a className="text-primary" href="/auth/google" id="login-link">Login</a></p>
+        <p className="lead">Already have an account? <a className="text-primary animated-link" href="/auth/google" id="login-link">Login</a></p>
 
       </div>
     )

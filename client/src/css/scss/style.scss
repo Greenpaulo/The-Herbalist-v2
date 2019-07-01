@@ -3,6 +3,7 @@
 @import 'form';
 @import 'dropdown';
 @import 'animations';
+@import 'media';
 
 // Resets
 * {
@@ -63,11 +64,13 @@ img {
     }
   }
 
-  i {
-    color: $primary-color;
+  #open-slide {
+    display: none;
   }
 
 }
+
+
 
 .login {
   background-color: $primary-color;
@@ -83,9 +86,41 @@ img {
   }
 }
 
-.navbar-logo {
+.logo {
   font-size: 2em;
 }
+
+.dropdown-nav {
+  position: absolute;
+  top: 4.5rem;
+  padding: 2rem;
+  z-index: 10;
+  background-color: $dark-color;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s ease-in;
+    
+    li {
+      list-style: none;
+      padding: 0.5rem 1rem;
+      display: inline;
+
+      .login {
+        width: 2rem;
+      }
+    }
+
+    a{
+      color: $light-color;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+  }
 
 
 
@@ -442,11 +477,14 @@ section#condition-list{
   }
 
   #herb-img{
-    img {
+    background: red;
+    border-radius: 50%;
     grid-area: image;
     height: 350px;
     width:350px;
-    border-radius: 50%;
+    overflow: hidden;
+    img {
+      height: 350px;
     }
   } 
 }
@@ -603,29 +641,6 @@ section#condition-list{
   
   #login-link {
     margin-left: 0.7rem;
-    transition: all 0.2s ease-in;
-    position: absolute;
-
-    &:hover {
-    color: darken($primary-color, 10%);
-
-      &::after {
-        animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
-      }
-    }
-
-    &::after {
-      border-radius: 1em;
-      border-top: .1em solid $primary-color;
-      content:"";
-      position: absolute;
-        right: 100%;
-        bottom: .14em;
-        left: 0;
-      transition: right .4s cubic-bezier(0,.5,0,1);
-    }
-
-    
   }
 }
 
@@ -641,6 +656,51 @@ section#condition-list{
     font-size: 1.2rem;
   }
 }
+
+// Terms
+#terms {
+  div:nth-child(2) {
+    margin-top: 3rem;
+  }
+}
+
+// Footer
+footer {
+  min-height: 10vh;
+  padding: 0.7rem 2rem;
+  border-top: solid 1px lighten($primary-color, 15%);
+
+  div:first-child {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  a {
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    color: $light-color;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  ul {
+    text-align: center;
+    margin: 0.8rem 0;
+  }
+
+  li {
+    display: inline; 
+  }
+  
+}
+
+
+
+
+
 
 
 

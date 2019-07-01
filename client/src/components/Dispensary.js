@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import Footer from './Footer';
 import * as actions from '../actions';
 import uuid from 'uuid';
 
@@ -62,10 +63,10 @@ class Dispensary extends Component {
           </div>
           <br />
 
-          <p className="medium">Prescription</p>
+          <p className="medium animated fadeIn delay-custom3">Prescription</p>
 
           {/* Form to add herbs to a prescription */}
-          <div className="card shadow" id="prescription-form">
+          <div className="card shadow animated fadeIn delay-custom3" id="prescription-form">
             <Form className="form">
               <i className="fas fa-prescription fa-3x"></i>
               <div className="form-group">
@@ -181,7 +182,7 @@ class Dispensary extends Component {
           </div>
 
         </section >
-
+        <Footer />
       </Fragment >
     )
   }

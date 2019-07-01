@@ -17,7 +17,6 @@ class Landing extends Component {
   }
 
   handleScroll() {
-    console.log('scrolled')
     const chevron = document.querySelector('#scrollDown');
     setTimeout(() => {
       chevron.classList.add('fadeOut', 'animated');

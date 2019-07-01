@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import HerbEntry from './HerbEntry';
 import uuid from 'uuid';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Footer from './Footer';
 import * as actions from '../actions'
 
 class MateriaMedica extends Component {
@@ -37,52 +38,55 @@ class MateriaMedica extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 className="x-large text-primary animated fadeInDown">Materia Medica</h1>
+      <Fragment>
+        <div className="container">
+          <h1 className="x-large text-primary animated fadeInDown">Materia Medica</h1>
 
-        <section id="herb-select-btns" className="animated fadeIn delay-custom1">
-          <h2 className="medium">Herb Select:</h2>
-          <div className="dropdown">
-            <button className="dropbtn shadow">A - D</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(0, 15)}
+          <section id="herb-select-btns" className="animated fadeIn delay-custom1">
+            <h2 className="medium">Herb Select:</h2>
+            <div className="dropdown">
+              <button className="dropbtn shadow">A - D</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(0, 15)}
+              </div>
             </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn shadow">E - H</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(15, 25)}
+            <div className="dropdown">
+              <button className="dropbtn shadow">E - H</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(15, 25)}
+              </div>
             </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn shadow">I - L</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(25, 29)}
+            <div className="dropdown">
+              <button className="dropbtn shadow">I - L</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(25, 29)}
+              </div>
             </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn shadow">M - P</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(29, 40)}
+            <div className="dropdown">
+              <button className="dropbtn shadow">M - P</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(29, 40)}
+              </div>
             </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn shadow">Q - T</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(40, 47)}
+            <div className="dropdown">
+              <button className="dropbtn shadow">Q - T</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(40, 47)}
+              </div>
             </div>
-          </div>
-          <div className="dropdown">
-            <button className="dropbtn shadow">U - Z</button>
-            <div className="dropdown-content">
-              {this.renderHerbSelect(47, 55)}
+            <div className="dropdown">
+              <button className="dropbtn shadow">U - Z</button>
+              <div className="dropdown-content">
+                {this.renderHerbSelect(47, 55)}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <HerbEntry />
-        <Link to='./references' id="reference-button" className="btn btn-primary">Materia Medica References</Link>
-      </div>
+          <HerbEntry />
+          <Link to='./references' id="reference-button" className="btn btn-primary">Materia Medica References</Link>
+        </div>
+        <Footer />
+      </Fragment>
     )
   }
 }

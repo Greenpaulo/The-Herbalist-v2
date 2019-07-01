@@ -15,6 +15,7 @@ import PrivateRoute from './routing/PrivateRoute';
 import Login from './Login';
 import About from './About';
 import References from './References';
+import Terms from './Terms';
 import Test from './Test';
 
 import * as actions from '../actions';
@@ -40,6 +41,7 @@ class App extends Component {
           <PrivateRoute path='/edit_medicine' component={Edit} />
           <Route path='/login' component={Login} />
           <Route path='/references' component={References} />
+          <Route path='/terms' component={Terms} />
           <Route path='/test' component={Test} />
         </Fragment>
       </BrowserRouter>
