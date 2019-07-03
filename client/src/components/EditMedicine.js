@@ -72,9 +72,8 @@ class EditMedicine extends Component {
           <div className="card animated fadeInUp" id="edit-form">
             {/* Edit Form */}
             <form onSubmit={this.onUpdateSubmit} className="form">
-              <div>
+              <div className="form-group">
                 <label htmlFor='patientName'>Patient Name</label>
-                <br />
                 <input
                   type='text'
                   name='patientName'
@@ -85,11 +84,10 @@ class EditMedicine extends Component {
                   required
                 />
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb1'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -121,11 +119,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb2'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -154,11 +151,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb3'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -187,11 +183,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb4'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -220,11 +215,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb5'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -253,11 +247,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb6'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -286,11 +279,10 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='herb7'>
-                  Herb:
+                  Herb
                 <input
                     type='text'
                     placeholder='Add herb...'
@@ -319,11 +311,9 @@ class EditMedicine extends Component {
                   />
                 </label>
               </div>
-              <br />
 
-              <div>
+              <div className="form-group">
                 <label htmlFor='notes'>Notes:</label>
-                <br />
                 <textarea
                   name='notes'
                   id='notes'

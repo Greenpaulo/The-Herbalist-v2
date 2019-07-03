@@ -50,7 +50,6 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_HERB:
       const { payload } = action;
-      console.log(payload)
       if (payload) {
         return {
           name: payload.name,

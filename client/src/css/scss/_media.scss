@@ -1,25 +1,472 @@
-// ipad Pro - 1024 width
+// Ipad Pro - 1024 width
 @media(max-width: 1024px) {
   // Navbar
   .navbar {
     #open-slide {
-      display: inline !important;
+      display: inline;
     }
 
     .nav-links {
       display: none;
     }
   }
- 
+
+  #section2 #para1 {
+    padding-top: 2.5rem;
+  }
+
+  #leaf-drop {
+    height: 100%;
+  }
+
+  // Edit form
+  #edit-form {
+    label {
+      display: block;
+    }
+
+    input[placeholder="Add herb..."] {
+      margin: 0 0.5rem 0 2rem;
+    }
+
+    .form-group {
+      margin: 1rem 0;
+    }
+  }
+
+}
+
+
+// Ipad & Large phone landscape
+@media(max-width: 900px) {
+  // Navbar
+  #dropdown-nav {
+    padding: 1.5rem 0.5rem;
+
+    li {
+      padding: 0.5rem;
+      margin-left: 0.5rem;
+    }
+    a {
+    font-size: 0.8rem;
+    }
+  }
+
+  // Landing
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // HowToUse
+  #section2 {
+    grid-template-areas:
+      "para1 img"
+      "para2 para2";
+
+    grid-template-rows: 400px auto;
+
+    #para1 {
+      padding-top: 5rem;
+    }
+    #para2 {
+      padding-top: 3rem;
+    }
+  }
+
+  //Materia Medica
+  #herb-id {
+    grid-template-columns: auto;
+    
+    #herb-img {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+
+  // Dispensary
+  .form input[type='number'], .form input[type="text"], .form select {
+    font-size: 0.9rem;
+  }
+
+  // Login
+  #sign-up h1 {
+    font-size: 2.5rem;
+  }
+
+  
+}
   
 
 
 
 
+// Smartphones ******************************************************
+@media(max-width: 667px){
+  // Utilities
+  .container {
+    margin-top: 5.5rem;
+  }
 
-}
+  .x-large {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 2.7rem 0;
+  }
 
-// Smartphones
-@media(max-width: 500px) {
+  // Navbar
+  .navbar {
+    padding: 0.7rem 2rem 0.7rem 0.5rem;
+  }
 
+  #dropdown-nav {
+    top: 4rem;
+    padding: 0.5rem 1rem 1.2rem 1rem;
+    
+    li {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  #open-slide i {
+    font-size: 2em;
+    margin-top: 0.2em;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  // Landing
+  .ptext.title{
+  font-size:27px;
+  }
+
+  .ptext {
+    font-size: 1rem;
+  }
+
+
+  // HowToUse
+  #section2 {
+    grid-template-areas:
+      "img"
+      "para1" 
+      "para2";
+
+    grid-template-rows: 450px 400px auto;
+    grid-row-gap: 1rem;
+
+    #para1 {
+      padding-top: 2rem;
+    }
+    #para2 {
+      padding-top: 3rem;
+    }
+  }
+
+  #section3 {
+    h2 {
+      text-align: center;
+    }
+
+    #grid {
+      grid-template-areas:
+        "square1" 
+        "square2"
+        "square3" 
+        "square4";
+
+      #square3 {
+        background-color: $light-color;
+      }
+
+      #square4 {
+        background: lighten($light-color, 2%);
+      }
+
+      #square1, #square2, #square3, #square4 {
+        padding: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Finder
+  #herb-finder-title {
+    margin-bottom: 2.7rem;
+  }
+  section#condition-selector {
+    background-color: #fff;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+
+    #buttons {
+    padding: 0.2rem;
+    background-color: #fff;
+
+      button {
+      margin: 0.7rem 0.48rem;
+      }
+
+      .btn {
+        padding: 0.7rem 1rem;
+      }
+    }
+  }
+
+  section#condition-list {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  // Materia medica
+  .dropdown {
+    margin: 1rem;
+    z-index: auto;
+  }
+
+  section#herb-select-btns {
+    h2 {
+      margin: 1rem 0;
+    }
+  }
+
+  #herb-entry {
+    margin-top: 0;
+    h3 {
+      text-align: center;
+    }
+  }
+
+  #herb-id {
+    text-align: center;
+    grid-template-areas: 
+    "image"
+    "subs";
+
+    #herb-img {
+      height: 250px;
+      width: 250px;
+      margin: auto;
+    }
+
+    #herb-title {
+      margin: 2rem 0;
+      padding: 0.5rem;
+    }
+
+    #herb-subtitles {
+      line-height: 3rem;
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
+  #other-info {
+    h3 {
+      text-align: left;
+    }
+  }
+
+  // Dispensary
+  #dispensary {
+    p.animated {
+      text-align: center;
+    }
+
+    .form input[type='number'], .form input[type="text"], .form select {
+      margin: 0.2rem;
+    }
+
+    label {
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin: 0.8rem 0;
+    }
+  }
+
+  // Cabinet
+  #cabinet {
+    p.delay-custom1 {
+      text-align: center;
+    }
+
+    .prescription, #prescription-table {
+      font-size: 1rem;
+    }
+  }
+
+  // Edit medicine
+  #edit-form {
+    .form {
+      input[type="text"], input[type="number"], input[type="select"] {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      select {
+        margin: 0;
+      }
+    }
+  }
+
+  // About
+  #about {
+    text-align: center;
+  }
+
+  // Terms
+  #terms {
+    h1, h2, h3 {
+      text-align: center;
+    }
+  }
+
+  // Login
+  #sign-up {
+    text-align: center;
+
+    p {
+      text-align: left;
+    }
+
+    #login-reason p {
+      text-align: center;
+    }
+    #lock {
+      display: block;
+      margin: 0 0 1rem 0;
+    }
+  }
+} 
+
+// Small phones e.g. Iphone5
+@media(max-width: 320px){
+  // Utilities
+  .x-large {
+    margin: 2.7rem 0;
+  }
+  // Landing
+  .ptext.title{
+  font-size: 1.4rem;
+  }
+
+  .pimg2 .ptext {
+    font-size: 1rem;
+  }
+
+  .pimg3 .ptext {
+    font-size: 0.7rem;
+  }
+
+  // How To Use
+  #section2 {
+    grid-template-rows: 400px auto;
+    #para1, #para2 {
+      padding: 1.5rem;
+       font-size: 1rem;
+    }
+    
+  }
+
+  // Finder
+  section#condition-selector #buttons {
+    .btn {
+      padding: 0.5rem;
+    }
+    button {
+      margin: 0.7rem 0.12rem;
+    }
+  }
+
+  // Materia medica
+  .dropbtn {
+    padding: 0.5rem;
+  }
+
+  #herb-entry {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  #herb-id #herb-title {
+    padding: 0 0 2rem 0;
+  }
+
+  .card-dark p {
+    font-size: 0.9rem;
+  }
+  
+  //Dispensary
+  #dispensary {
+    #prescription-form {
+      padding-left: 1.2rem;
+      padding-right: 1rem;
+    }
+  }
+
+  // Cabinet
+  #cabinet #prescription-table {
+    font-size: 0.8rem;
+  }
+
+  .card .prescription {
+    padding: 1rem;
+  }
+  .prescription {
+    #prescription-table {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  
+  #edit-btn, #delete-btn {
+    padding: 0.6rem 1rem;
+  }
+
+  // About
+  #about {
+    p {
+      font-size: 1rem;
+    }
+  }
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  // Login
+  #sign-up {
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
+    }
+    p {
+    font-size: 1rem;
+    }
+  }
+  
 }

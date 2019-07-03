@@ -15,13 +15,13 @@ class HerbEntry extends Component {
     if (currentHerb.actionsIndications !== undefined) {
       return currentHerb.actionsIndications.map((actInd) => {
         return (
-          <div className="action-indication card animated fadeIn delay-custom4" key={uuid.v4()}>
+          <div className="action-indication card animated fadeIn delay-custom3" key={uuid.v4()}>
             <div className="actions">
-              <h3 className="my-1.5">Actions:</h3>
+              <h3 className="my-1.5">Actions</h3>
               <h4>{actInd.actions}</h4>
             </div>
             <div className="indications">
-              <h3 className="my-1.5">Indications:</h3>
+              <h3 className="my-1.5">Indications</h3>
               {this.renderIndications(actInd)}
             </div>
           </div>
@@ -47,7 +47,7 @@ class HerbEntry extends Component {
       currentHerb.contraIndications !== undefined) {
       return (
         <div className="card-dark">
-          <h3>Contra-indications:</h3>
+          <h3>Contra-indications</h3>
           {this.renderContraIndication()}
         </div>
       )
@@ -66,7 +66,7 @@ class HerbEntry extends Component {
       currentHerb.safety !== undefined) {
       return (
         <div className="card-dark">
-          <h3>Safety: </h3>
+          <h3>Safety </h3>
           <p>{currentHerb.safety}</p>
         </div>
       )
@@ -79,7 +79,7 @@ class HerbEntry extends Component {
       currentHerb.botanicalDescription !== undefined) {
       return (
         <div className="card-dark">
-          <h3>Botanical Description: </h3>
+          <h3>Botanical Description </h3>
           <p>{currentHerb.botanicalDescription}</p>
         </div>
       )
@@ -92,7 +92,7 @@ class HerbEntry extends Component {
       currentHerb.externalUsage !== undefined) {
       return (
         <div className="card-dark">
-          <h3>External Usage:</h3>
+          <h3>External Usage</h3>
           {this.renderUsage()}
         </div>
       )
@@ -111,7 +111,7 @@ class HerbEntry extends Component {
       currentHerb.energeticUsage !== undefined) {
       return (
         <div className="card-dark" id="traditional-usage">
-          <h3>Other Traditional Usage:</h3>
+          <h3>Other Traditional Usage</h3>
           {this.renderTradition()}
         </div>
       )
@@ -130,7 +130,7 @@ class HerbEntry extends Component {
       currentHerb.clinicalTrials !== undefined) {
       return (
         <div className="card-dark">
-          <h3>Clinical Trials:</h3>
+          <h3>Clinical Trials</h3>
           {this.renderTrial()}
         </div>
       )
@@ -181,8 +181,8 @@ class HerbEntry extends Component {
     return (
       <Fragment>
         <section id="herb-entry">
-          <div id="herb-id">
 
+          <div id="herb-id">
             <div id="herb-subtitles" className="animated fadeInLeft delay-custom2">
               <h1 id="herb-title" className="large text-primary">{currentHerb.title}</h1>
               <h3 className="lead">Common Name: {currentHerb.commonName}</h3>
@@ -204,7 +204,7 @@ class HerbEntry extends Component {
             {this.renderSafety()}
 
             <div className="card-dark">
-              <h3>Dosage:</h3>
+              <h3>Dosage</h3>
               <p>{currentHerb.dosage}</p>
             </div>
 

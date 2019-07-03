@@ -83,7 +83,7 @@ class MateriaMedica extends Component {
           </section>
 
           <HerbEntry />
-          <Link to='./references' id="reference-button" className="btn btn-primary">Materia Medica References</Link>
+          <Link to='/references' id="reference-button" className="btn btn-primary">Materia Medica References</Link>
         </div>
         <Footer />
       </Fragment>

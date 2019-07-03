@@ -24,13 +24,25 @@ class Navbar extends Component {
   }
 
   toggleDropdown = () => {
+    // If not already showing then open
     if (this.state.dropdownActive === false) {
       const dropdown = document.querySelector("#dropdown-nav");
       dropdown.classList.add = "animated fadeInDown";
-      dropdown.style.opacity = "0.9";
+      dropdown.style.zIndex = "2";
+
+      // Set variable opacity dependent on width of display
+      if (window.innerWidth < 500) {
+        dropdown.style.opacity = "1";
+      } else {
+        dropdown.style.opacity = "0.9";
+      };
       this.setState({ dropdownActive: true });
+
     } else {
-      document.querySelector("#dropdown-nav").style.opacity = "0";
+      // Its open, so close
+      const dropdown = document.querySelector("#dropdown-nav");
+      dropdown.style.opacity = "0";
+      dropdown.style.zIndex = "0";
       this.setState({ dropdownActive: false });
     }
   }

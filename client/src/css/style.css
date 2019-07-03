@@ -523,15 +523,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .navbar #open-slide {
-    display: inline !important;
-  }
-  .navbar .nav-links {
-    display: none;
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -574,7 +565,7 @@ img {
           justify-content: space-between;
   padding: 0.7rem 2rem;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   top: 0;
   border-bottom: solid 1px #44c406;
@@ -623,10 +614,10 @@ img {
 }
 
 .dropdown-nav {
-  position: absolute;
+  position: fixed;
   top: 4.5rem;
   padding: 2rem;
-  z-index: 10;
+  z-index: 2;
   background-color: #282e34;
   width: 100%;
   text-align: center;
@@ -766,27 +757,37 @@ img {
 }
 
 #section2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "para1 img" "para2 img";
 }
 
-#section2 #info p {
+#section2 p {
   padding: 2rem 2rem 2rem 3rem;
   font-size: 1.2rem;
   line-height: 2rem;
 }
 
-#section2 #info #para1 {
+#section2 #para1 {
   padding-top: 3.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: para1;
 }
 
-#section2 #info #para2 {
+#section2 #para2 {
   padding-bottom: 3.5rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: para2;
 }
 
 #section2 #leaf-drop {
   max-width: 400px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: img;
 }
 
 #section3 {
@@ -981,7 +982,6 @@ section#condition-list a:hover {
 }
 
 #herb-id #herb-img {
-  background: red;
   border-radius: 50%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1075,6 +1075,10 @@ section#condition-list a:hover {
 
 .prescription .prescription-buttons #delete-btn:hover {
   background-color: #cc0000;
+}
+
+input[placeholder="Add herb..."] {
+  margin: 0 0.5rem;
 }
 
 #contact {
@@ -1177,4 +1181,316 @@ footer ul {
 
 footer li {
   display: inline;
+}
+
+@media (max-width: 1024px) {
+  .navbar #open-slide {
+    display: inline;
+  }
+  .navbar .nav-links {
+    display: none;
+  }
+  #section2 #para1 {
+    padding-top: 2.5rem;
+  }
+  #leaf-drop {
+    height: 100%;
+  }
+  #edit-form label {
+    display: block;
+  }
+  #edit-form input[placeholder="Add herb..."] {
+    margin: 0 0.5rem 0 2rem;
+  }
+  #edit-form .form-group {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  #dropdown-nav {
+    padding: 1.5rem 0.5rem;
+  }
+  #dropdown-nav li {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  #dropdown-nav a {
+    font-size: 0.8rem;
+  }
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #section2 {
+        grid-template-areas: "para1 img" "para2 para2";
+    -ms-grid-rows: 400px auto;
+        grid-template-rows: 400px auto;
+  }
+  #section2 #para1 {
+    padding-top: 5rem;
+  }
+  #section2 #para2 {
+    padding-top: 3rem;
+  }
+  #herb-id {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  #herb-id #herb-img {
+    height: 250px;
+    width: 250px;
+  }
+  .form input[type='number'], .form input[type="text"], .form select {
+    font-size: 0.9rem;
+  }
+  #sign-up h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    margin-top: 5.5rem;
+  }
+  .x-large {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 2.7rem 0;
+  }
+  .navbar {
+    padding: 0.7rem 2rem 0.7rem 0.5rem;
+  }
+  #dropdown-nav {
+    top: 4rem;
+    padding: 0.5rem 1rem 1.2rem 1rem;
+  }
+  #dropdown-nav li {
+    display: block;
+    margin: 0;
+  }
+  #open-slide i {
+    font-size: 2em;
+    margin-top: 0.2em;
+  }
+  .logo {
+    font-size: 1.5em;
+  }
+  .ptext.title {
+    font-size: 27px;
+  }
+  .ptext {
+    font-size: 1rem;
+  }
+  #section2 {
+        grid-template-areas: "img" "para1"  "para2";
+    -ms-grid-rows: 450px 400px auto;
+        grid-template-rows: 450px 400px auto;
+    grid-row-gap: 1rem;
+  }
+  #section2 #para1 {
+    padding-top: 2rem;
+  }
+  #section2 #para2 {
+    padding-top: 3rem;
+  }
+  #section3 h2 {
+    text-align: center;
+  }
+  #section3 #grid {
+        grid-template-areas: "square1"  "square2" "square3"  "square4";
+  }
+  #section3 #grid #square3 {
+    background-color: #f4f4f4;
+  }
+  #section3 #grid #square4 {
+    background: #f9f9f9;
+  }
+  #section3 #grid #square1, #section3 #grid #square2, #section3 #grid #square3, #section3 #grid #square4 {
+    padding: 2.2rem;
+  }
+  #section3 #grid p {
+    font-size: 1rem;
+  }
+  #herb-finder-title {
+    margin-bottom: 2.7rem;
+  }
+  section#condition-selector {
+    background-color: #fff;
+  }
+  section#condition-selector h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  section#condition-selector #buttons {
+    padding: 0.2rem;
+    background-color: #fff;
+  }
+  section#condition-selector #buttons button {
+    margin: 0.7rem 0.48rem;
+  }
+  section#condition-selector #buttons .btn {
+    padding: 0.7rem 1rem;
+  }
+  section#condition-list h2 {
+    text-align: center;
+  }
+  .dropdown {
+    margin: 1rem;
+    z-index: auto;
+  }
+  section#herb-select-btns h2 {
+    margin: 1rem 0;
+  }
+  #herb-entry {
+    margin-top: 0;
+  }
+  #herb-entry h3 {
+    text-align: center;
+  }
+  #herb-id {
+    text-align: center;
+        grid-template-areas: "image" "subs";
+  }
+  #herb-id #herb-img {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+  }
+  #herb-id #herb-title {
+    margin: 2rem 0;
+    padding: 0.5rem;
+  }
+  #herb-id #herb-subtitles {
+    line-height: 3rem;
+  }
+  #herb-id #herb-subtitles h3 {
+    text-align: center;
+  }
+  #other-info h3 {
+    text-align: left;
+  }
+  #dispensary p.animated {
+    text-align: center;
+  }
+  #dispensary .form input[type='number'], #dispensary .form input[type="text"], #dispensary .form select {
+    margin: 0.2rem;
+  }
+  #dispensary label {
+    font-size: 1rem;
+  }
+  #dispensary .form-group {
+    margin: 0.8rem 0;
+  }
+  #cabinet p.delay-custom1 {
+    text-align: center;
+  }
+  #cabinet .prescription, #cabinet #prescription-table {
+    font-size: 1rem;
+  }
+  #edit-form .form input[type="text"], #edit-form .form input[type="number"], #edit-form .form input[type="select"] {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  #edit-form .form select {
+    margin: 0;
+  }
+  #about {
+    text-align: center;
+  }
+  #terms h1, #terms h2, #terms h3 {
+    text-align: center;
+  }
+  #sign-up {
+    text-align: center;
+  }
+  #sign-up p {
+    text-align: left;
+  }
+  #sign-up #login-reason p {
+    text-align: center;
+  }
+  #sign-up #lock {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .x-large {
+    margin: 2.7rem 0;
+  }
+  .ptext.title {
+    font-size: 1.4rem;
+  }
+  .pimg2 .ptext {
+    font-size: 1rem;
+  }
+  .pimg3 .ptext {
+    font-size: 0.7rem;
+  }
+  #section2 {
+    -ms-grid-rows: 400px auto;
+        grid-template-rows: 400px auto;
+  }
+  #section2 #para1, #section2 #para2 {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  section#condition-selector #buttons .btn {
+    padding: 0.5rem;
+  }
+  section#condition-selector #buttons button {
+    margin: 0.7rem 0.12rem;
+  }
+  .dropbtn {
+    padding: 0.5rem;
+  }
+  #herb-entry h1 {
+    font-size: 2.2rem;
+  }
+  #herb-entry h4 {
+    font-size: 1rem;
+  }
+  #herb-id #herb-title {
+    padding: 0 0 2rem 0;
+  }
+  .card-dark p {
+    font-size: 0.9rem;
+  }
+  #dispensary #prescription-form {
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+  }
+  #cabinet #prescription-table {
+    font-size: 0.8rem;
+  }
+  .card .prescription {
+    padding: 1rem;
+  }
+  .prescription #prescription-table {
+    margin-left: 0;
+    width: 100%;
+  }
+  .prescription h3 {
+    font-size: 1rem;
+  }
+  #edit-btn, #delete-btn {
+    padding: 0.6rem 1rem;
+  }
+  #about p {
+    font-size: 1rem;
+  }
+  .contact-info {
+    font-size: 1rem;
+  }
+  #sign-up h1 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+  #sign-up p {
+    font-size: 1rem;
+  }
 }

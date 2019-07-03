@@ -76,7 +76,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb1">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb1">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -90,7 +90,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb2">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb2">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -104,7 +104,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb3">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb3">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -118,7 +118,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb4">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb4">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -132,7 +132,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb5">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb5">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -146,7 +146,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb6">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb6">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}
@@ -160,7 +160,7 @@ class Dispensary extends Component {
 
               <div className="form-group">
                 <label htmlFor="herb7">
-                  Herb:
+                  Herb
                     <Field component="select" name="herb7">
                     <option>Please select...</option>
                     {this.renderHerbSelect()}

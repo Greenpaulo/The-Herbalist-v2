@@ -8,7 +8,7 @@ class About extends React.Component {
   render() {
     return (
       <Fragment>
-        <div className="container">
+        <div className="container" id="about">
           <div id="about-intro" className="my-2">
             <h1 className="x-large text-primary animated fadeInDown">About Us</h1>
             <h2 className="medium text-dark animated bounceInLeft">Hello, I'm Paul!</h2>

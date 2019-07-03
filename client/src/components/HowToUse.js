@@ -22,18 +22,16 @@ class Home extends Component {
           </section>
 
           <section id="section2">
-            <div id="info" className="animated fadeInLeft delay-custom2">
-              <p id="para1" className="bg-light">There is a lot more to healing than is currently practised in our healthcare system. Real healing goes
-              way beyond the physical. By using plants to heal us we can begin to understand the power of the mind and
+            <p id="para1" className="bg-light animated fadeInLeft delay-custom2">There is a lot more to healing than is currently practised in our healthcare system. Real healing goes
+            way beyond the physical. By using plants to heal us we can begin to understand the power of the mind and
               our role in healing our own bodies and lives.</p>
 
-              <p id="para2" className="bg-light">Plant medicines work in an entirely different way than orthodox medicines, they are alive and contain
-              intelligent life-force or spirit that teach us to heal our minds and bodies through direct realisation
-              of how we have created our disease and how we can heal it. This may seem a burden at first but with
-              understanding we realise that we are empowered by this knowledge and as nature teaches us to regain
-              control of our health and our lives, we see that we can create anything we want in our life. Ultimately
+            <p id="para2" className="bg-light animated fadeInLeft delay-custom2">Plant medicines work in an entirely different way than orthodox medicines, they are alive and contain
+            intelligent life-force or spirit that teach us to heal our minds and bodies through direct realisation
+            of how we have created our disease and how we can heal it. This may seem a burden at first but with
+            understanding we realise that we are empowered by this knowledge and as nature teaches us to regain
+            control of our health and our lives, we see that we can create anything we want in our life. Ultimately
               this power is our birthright.</p>
-            </div>
             <img className="animated fadeInRight delay-custom2" id="leaf-drop" src="./images/leaf-drop.jpg" alt="Medicine bottle" />
           </section>
 
