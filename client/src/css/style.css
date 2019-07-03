@@ -1222,6 +1222,9 @@ footer li {
     padding-left: 0;
     padding-right: 0;
   }
+  #scrollDown .fa-5x {
+    font-size: 3em;
+  }
   #section2 {
         grid-template-areas: "para1 img" "para2 para2";
     -ms-grid-rows: 400px auto;
@@ -1276,6 +1279,9 @@ footer li {
   }
   .logo {
     font-size: 1.5em;
+  }
+  #scrollDown .fa-5x {
+    font-size: 2em;
   }
   .ptext.title {
     font-size: 27px;
@@ -1424,6 +1430,9 @@ footer li {
   }
   .ptext.title {
     font-size: 1.4rem;
+  }
+  #scrollDown .fa-5x {
+    font-size: 1.5em;
   }
   .pimg2 .ptext {
     font-size: 1rem;

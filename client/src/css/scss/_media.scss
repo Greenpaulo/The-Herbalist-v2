@@ -58,6 +58,10 @@
     padding-right: 0;
   }
 
+  #scrollDown .fa-5x {
+    font-size: 3em;
+  }
+
   // HowToUse
   #section2 {
     grid-template-areas:
@@ -141,6 +145,10 @@
   }
 
   // Landing
+  #scrollDown .fa-5x {
+    font-size: 2em;
+  }
+
   .ptext.title{
   font-size:27px;
   }
@@ -365,6 +373,10 @@
   // Landing
   .ptext.title{
   font-size: 1.4rem;
+  }
+
+  #scrollDown .fa-5x {
+    font-size: 1.5em;
   }
 
   .pimg2 .ptext {
