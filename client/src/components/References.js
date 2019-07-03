@@ -8,7 +8,7 @@ class References extends Component {
   render() {
     return (
       <Fragment>
-        <div className="container">
+        <div className="container" id="references">
           <h1 className="x-large text-primary animated fadeInDown">Materia Medica References</h1>
           <ul className="card animated fadeIn delay-custom1" id="reference-list">
             <li>(Ba) Bartram, T. (1998) Bartram’s Encyclopedia of Herbal Medicine. London: Robinson</li>

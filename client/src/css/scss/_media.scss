@@ -468,5 +468,17 @@
     font-size: 1rem;
     }
   }
+
+  // References
+  #references h1 {
+    font-size: 2rem;
+  }
+  #reference-list {
+    margin-top: 0;
+    li {
+      padding: 0.8rem 0;
+      font-size: 0.8rem;
+    }
+}
   
 }

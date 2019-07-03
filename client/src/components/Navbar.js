@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class Navbar extends Component {
   state = {
-    dropdownActive: true
+    dropdownActive: false
   }
   // Helper method to show authenticated content
   renderLogin() {
@@ -29,6 +29,7 @@ class Navbar extends Component {
       const dropdown = document.querySelector("#dropdown-nav");
       dropdown.classList.add = "animated fadeInDown";
       dropdown.style.zIndex = "2";
+      dropdown.style.display = "block"
 
       // Set variable opacity dependent on width of display
       if (window.innerWidth < 500) {
@@ -42,12 +43,13 @@ class Navbar extends Component {
       // Its open, so close
       const dropdown = document.querySelector("#dropdown-nav");
       dropdown.style.opacity = "0";
+      dropdown.style.display = "none";
       dropdown.style.zIndex = "0";
       this.setState({ dropdownActive: false });
     }
   }
 
-  handleClick = () => {
+  handleClick = (link) => {
     console.log('clicked');
     this.toggleDropdown();
   }
@@ -66,7 +68,6 @@ class Navbar extends Component {
             <li><Link to="/cabinet">Medicine Cabinet</Link></li>
             <li><Link to="/about">About Us</Link></li>
             {this.renderLogin()}
-
           </ul>
           <div id="open-slide">
             <i className="fa fa-bars fa-3x" onClick={this.toggleDropdown}></i>

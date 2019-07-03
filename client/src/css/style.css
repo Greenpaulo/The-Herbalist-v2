@@ -1493,4 +1493,14 @@ footer li {
   #sign-up p {
     font-size: 1rem;
   }
+  #references h1 {
+    font-size: 2rem;
+  }
+  #reference-list {
+    margin-top: 0;
+  }
+  #reference-list li {
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+  }
 }
