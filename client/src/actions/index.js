@@ -22,19 +22,10 @@ export const fetchCategory = (keyword) => {
 // Action creator to fetch a herb's materia medica entry
 export const fetchHerb = (herb) => {
   return dispatch => {
-    console.log("action creator fired for " + herb)
     axios.get(`/api/herb?${herb}`)
       .then(res => dispatch({ type: FETCH_HERB, payload: res.data }))
   };
 };
-
-// // Action creator to fetch a herb's materia medica entry by latin name
-// export const fetchHerbByLatin = (herb) => {
-//   return dispatch => {
-//     axios.get(`/api/herb?${herb}`)
-//       .then(res => dispatch({ type: FETCH_HERB, payload: res.data }))
-//   };
-// };
 
 // Action creator to fetch the list of herb latin titles that are in the DB
 export const fetchHerbList = () => {

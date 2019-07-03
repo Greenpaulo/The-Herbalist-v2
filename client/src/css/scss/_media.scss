@@ -212,6 +212,7 @@
   }
   section#condition-selector {
     background-color: #fff;
+    margin-bottom: 0;
     
     h2 {
       text-align: center;
@@ -231,6 +232,10 @@
         padding: 0.7rem 1rem;
       }
     }
+  }
+
+  #spacer {
+    padding: 2rem;
   }
 
   section#condition-list {

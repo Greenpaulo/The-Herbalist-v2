@@ -624,6 +624,7 @@ img {
   opacity: 0;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+  display: none;
 }
 
 .dropdown-nav li {
@@ -1324,6 +1325,7 @@ footer li {
   }
   section#condition-selector {
     background-color: #fff;
+    margin-bottom: 0;
   }
   section#condition-selector h2 {
     text-align: center;
@@ -1339,6 +1341,9 @@ footer li {
   }
   section#condition-selector #buttons .btn {
     padding: 0.7rem 1rem;
+  }
+  #spacer {
+    padding: 2rem;
   }
   section#condition-list h2 {
     text-align: center;

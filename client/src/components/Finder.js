@@ -10,6 +10,10 @@ class Finder extends Component {
 
   onCategorySelect(keyword) {
     this.props.fetchCategory(keyword);
+    if (window.innerWidth < 500) {
+      const spacer = document.getElementById("spacer");
+      spacer.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   render() {
@@ -27,9 +31,6 @@ class Finder extends Component {
             <p>Then read the descriptions of the herbs and choose which herbs you think best suit your condition. If you can't find your condition in the list below, then choose herbs that are in the category and you will probably find your condition listed in the Materia Medica entries for those herbs.</p>
           </div>
         </section>
-
-
-
 
         <section id="condition-selector" className="animated fadeIn delay-custom2">
           <h2 className="medium"> List of Conditions</h2>
@@ -57,6 +58,8 @@ class Finder extends Component {
             <button type='button' onClick={this.onCategorySelect.bind(this, 'children')} className='btn btn-primary shadow'> Children/Babies </button>
           </div>
         </section>
+
+        <div id="spacer"></div>
 
         <section id="condition-list">
           <ConditionList />

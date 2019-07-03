@@ -77,7 +77,7 @@ class Landing extends Component {
         <section className="section section-dark">
           <h2>Stress Relief</h2>
           <p className="landing-info">
-            Herbal Medicine views the patient as a whole. Mental, physical, and spiritual concerns are all taken onboard. One
+            Herbal Medicine views the patient as a whole. Mental, physical, and spiritual concerns are all taken on board. One
             of the major contributors of illness in the modern world is stress. Plant remedies are excellent at relieving all
             forms of stress and address many other mental and emotional conditions.
           </p>
