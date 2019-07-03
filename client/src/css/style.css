@@ -1406,6 +1406,9 @@ footer li {
   #about {
     text-align: center;
   }
+  .contact-info {
+    font-size: 1rem;
+  }
   #terms h1, #terms h2, #terms h3 {
     text-align: center;
   }
@@ -1493,7 +1496,7 @@ footer li {
     font-size: 1rem;
   }
   .contact-info {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   #sign-up h1 {
     font-size: 2.1rem;
