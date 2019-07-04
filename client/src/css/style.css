@@ -653,6 +653,7 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .pimg1 a, .pimg2 a, .pimg3 a {
@@ -1196,6 +1197,9 @@ footer li {
   #leaf-drop {
     height: 100%;
   }
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
   #edit-form label {
     display: block;
   }
@@ -1518,23 +1522,5 @@ footer li {
   #reference-list li {
     padding: 0.8rem 0;
     font-size: 0.8rem;
-  }
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  /* CSS specific to iOS devices */
-  /* Small Devices, Tablets */
-  @media only screen and (max-width: 768px) {
-    .animated {
-      /*CSS transitions*/
-      -webkit-transition-property: none !important;
-      transition-property: none !important;
-      /*CSS transforms*/
-      -webkit-transform: none !important;
-      transform: none !important;
-      /*CSS animations*/
-      -webkit-animation: none !important;
-      animation: none !important;
-    }
   }
 }

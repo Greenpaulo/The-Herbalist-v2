@@ -19,6 +19,12 @@
     height: 100%;
   }
 
+  // Landing
+  //Remove parallax - cause issues on mobiles
+  .pimg1, .pimg2, .pimg3{
+    background-attachment: scroll;
+  }
+
   // Edit form
   #edit-form {
     label {

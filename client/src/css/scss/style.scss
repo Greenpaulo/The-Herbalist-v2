@@ -133,6 +133,7 @@ img {
   background-position:center;
   background-size: cover;
   background-repeat:no-repeat;
+  background-attachment: fixed;
 
   a {
     color: #000;
@@ -671,7 +672,6 @@ footer {
 }
 
 @import 'media';
-@import 'media-ios';
 
 
 
