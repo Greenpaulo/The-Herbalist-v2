@@ -28,7 +28,7 @@ class Landing extends Component {
     return (
       <Fragment>
 
-        <div className="pimg1 animated fadeInLanding slow">
+        <div className="pimg1 fadeInLanding slow">
           <div className="ptext title">
             <span className="border trans">
               <Link to="/how_to_use" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
