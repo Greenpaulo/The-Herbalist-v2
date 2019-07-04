@@ -28,14 +28,14 @@ class Landing extends Component {
     return (
       <Fragment>
 
-        <div className="pimg1">
+        <div className="pimg1 animated fadeInLanding slow">
           <div className="ptext title">
             <span className="border trans">
-              <Link to="/how_to_use" id="landing-logo">The Herbalist</Link>
+              <Link to="/how_to_use" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
             </span>
           </div>
           <div id="scrollDown">
-            <i className="fas fa-chevron-down fa-5x"></i>
+            <i className="fas fa-chevron-down fa-5x scrollDownAnimate"></i>
           </div>
         </div>
 
