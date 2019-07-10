@@ -1024,6 +1024,10 @@ section#condition-list a:hover {
   margin-bottom: 2rem;
 }
 
+#dispensary #prescription-form button {
+  border-radius: 10px;
+}
+
 .prescription {
   margin-bottom: 3rem;
   border-radius: 10px;
