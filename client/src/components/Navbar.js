@@ -35,7 +35,7 @@ class Navbar extends Component {
       if (window.innerWidth < 500) {
         dropdown.style.opacity = "1";
       } else {
-        dropdown.style.opacity = "0.9";
+        dropdown.style.opacity = "0";
       };
       this.setState({ dropdownActive: true });
 
