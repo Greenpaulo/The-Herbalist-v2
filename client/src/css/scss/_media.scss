@@ -1,5 +1,6 @@
 // Ipad Pro - 1024 width
-@media(max-width: 1024px) {
+// Note: changed to 1110px - as menu wasn't displaying correctly at 1110-1024px
+@media(max-width: 1130px) {
   // Navbar
   .navbar {
     #open-slide {
@@ -44,7 +45,8 @@
 
 
 // Ipad & Large phone landscape
-@media(max-width: 900px) {
+// Had to change to from 900 to 982px
+@media(max-width: 982px) {
   // Navbar
   #dropdown-nav {
     padding: 1.5rem 0.5rem;
@@ -113,7 +115,8 @@
 
 
 // Smartphones ******************************************************
-@media(max-width: 667px){
+// Changed from 667 to 742
+@media(max-width: 742px){
   // Utilities
   .container {
     margin-top: 5.5rem;

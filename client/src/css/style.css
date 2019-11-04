@@ -1188,7 +1188,7 @@ footer li {
   display: inline;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1130px) {
   .navbar #open-slide {
     display: inline;
   }
@@ -1215,7 +1215,7 @@ footer li {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 982px) {
   #dropdown-nav {
     padding: 1.5rem 0.5rem;
   }
@@ -1260,7 +1260,7 @@ footer li {
   }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 742px) {
   .container {
     margin-top: 5.5rem;
   }

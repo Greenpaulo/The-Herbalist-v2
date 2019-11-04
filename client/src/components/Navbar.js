@@ -6,6 +6,7 @@ class Navbar extends Component {
   state = {
     dropdownActive: false
   }
+
   // Helper method to show authenticated content
   renderLogin() {
     switch (this.props.auth.user) {
@@ -24,10 +25,14 @@ class Navbar extends Component {
   }
 
   toggleDropdown = () => {
-    // If not already showing then open
-    if (this.state.dropdownActive === false) {
+    
+    // If not already showing and then open
+    // Note: check the browser width to stop dropdown opening when the login button is clicked on wider screens
+    if (this.state.dropdownActive === false && window.innerWidth < 1131) {
+
       const dropdown = document.querySelector("#dropdown-nav");
-      dropdown.classList.add = "animated fadeInDown";
+      dropdown.classList.toggle('animated');
+      dropdown.classList.toggle('fadeInDown');
       dropdown.style.zIndex = "2";
       dropdown.style.display = "block"
 
@@ -42,6 +47,8 @@ class Navbar extends Component {
     } else {
       // Its open, so close
       const dropdown = document.querySelector("#dropdown-nav");
+      dropdown.classList.toggle('animated');
+      dropdown.classList.toggle('fadeInDown');
       dropdown.style.opacity = "0";
       dropdown.style.display = "none";
       dropdown.style.zIndex = "0";
@@ -50,7 +57,6 @@ class Navbar extends Component {
   }
 
   handleClick = (link) => {
-    console.log('clicked');
     this.toggleDropdown();
   }
 
