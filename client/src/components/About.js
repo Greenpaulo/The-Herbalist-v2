@@ -17,7 +17,7 @@ class About extends React.Component {
             <div id="about-skills">
               <div className="bg-light animated bounceInLeft p-1 my-1 shadow">
                 <h2 className="medium text-dark my-1"><i className="fas fa-code"></i>  I'm a Web Developer</h2>
-                <p className="lead">I'm a self taught full-stack junior Web Developer. This app was built after 10 months of study, using React/Redux, Node/Express, MongoDB and custom CSS.</p>
+                <p className="lead">I'm a self taught Web Developer. This app was built with React/Redux, Node/Express, MongoDB and custom CSS.</p>
               </div>
 
               <div className="bg-light animated bounceInRight p-1 my-1 shadow">
