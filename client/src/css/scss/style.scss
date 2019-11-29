@@ -478,8 +478,26 @@ section#condition-list{
     p {
     font-weight: 500;
     margin: 1.7rem 0;
+    font-size: 1.2rem;
+    }
+
+    .icon-group {
+      display: flex;
+
+      i {
+        margin-top: 2.5rem;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
+
+  #card-two p {
+    font-size: 1.2rem;
+  }
+
 
   .list-group i {
       margin-top: 0.4rem;

@@ -1013,6 +1013,25 @@ section#condition-list a:hover {
 #dispensary #card-one p {
   font-weight: 500;
   margin: 1.7rem 0;
+  font-size: 1.2rem;
+}
+
+#dispensary #card-one .icon-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#dispensary #card-one .icon-group i {
+  margin-top: 2.5rem;
+}
+
+#dispensary #card-one .icon-group p {
+  margin-bottom: 0;
+}
+
+#dispensary #card-two p {
+  font-size: 1.2rem;
 }
 
 #dispensary .list-group i {

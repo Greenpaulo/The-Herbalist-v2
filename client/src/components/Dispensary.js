@@ -36,7 +36,10 @@ class Dispensary extends Component {
           <p className="medium animated fadeIn delay-custom1">Here in the dispensary you can create herbal prescriptions for yourself, friends and family</p>
 
           <div className="card animated fadeIn delay-custom1" id="card-one">
-            <p><i className="fas fa-leaf fa-lg"></i>Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
+            <div className="icon-group">
+              <i className="fas fa-leaf fa-lg"></i>
+              <p>Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
+            </div>
             <p><i className="fas fa-flask fa-lg"></i>   You can then save your newly created medicines in the medicine cabinet for future usage</p>
             <p><i className="fas fa-exclamation-circle fa-lg"></i><strong>IMPORTANT :</strong> Please make sure you follow the dosage restrictions in the herb's materia medica entry.</p>
           </div>
@@ -53,12 +56,12 @@ class Dispensary extends Component {
 
             <div className="list-group">
               <i className="fas fa-clipboard-check fa-lg"></i>
-              <p> At the same time try to treat the person hopstically - for each physical symptom/problem area, try to treat the physical, emotional, mental and spiritual aspect of that problem. </p>
+              <p> At the same time try to treat the person holistically - for each physical symptom/problem area, try to treat the physical, emotional, mental and spiritual aspect of that problem. </p>
             </div>
 
             <div className="list-group">
               <i className="fas fa-clipboard-check fa-lg"></i>
-              <p> Note: Whilst treating hollistically, we are still focusing on one problem, but treating ALL aspects of that problem. This is not the same as treating many problems at once, which will lead to a more scattered treatment.</p>
+              <p> Note: Whilst treating holistically, we are still focusing on one problem, but treating ALL aspects of that problem. This is not the same as treating many problems at once, which will lead to a more scattered treatment.</p>
             </div>
           </div>
           <br />
