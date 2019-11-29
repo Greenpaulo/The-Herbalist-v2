@@ -484,8 +484,20 @@ section#condition-list{
     .icon-group {
       display: flex;
 
-      i {
+      i.fa-leaf {
         margin-top: 2.5rem;
+      }
+
+      i.fa-flask {
+        margin-top: 2.2rem;
+      }
+
+      i.fa-exclamation-circle {
+        margin-top: 2.1rem;
+
+        &+ p {
+          margin-bottom: 1.7rem;
+        }
       }
 
       p {

@@ -1022,8 +1022,20 @@ section#condition-list a:hover {
   display: flex;
 }
 
-#dispensary #card-one .icon-group i {
+#dispensary #card-one .icon-group i.fa-leaf {
   margin-top: 2.5rem;
+}
+
+#dispensary #card-one .icon-group i.fa-flask {
+  margin-top: 2.2rem;
+}
+
+#dispensary #card-one .icon-group i.fa-exclamation-circle {
+  margin-top: 2.1rem;
+}
+
+#dispensary #card-one .icon-group i.fa-exclamation-circle + p {
+  margin-bottom: 1.7rem;
 }
 
 #dispensary #card-one .icon-group p {

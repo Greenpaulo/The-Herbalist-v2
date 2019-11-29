@@ -40,8 +40,14 @@ class Dispensary extends Component {
               <i className="fas fa-leaf fa-lg"></i>
               <p>Select the herb you wish to dispense and then select the amount you wish to add to your prescription. You should aim for about 5-7 herbs per prescription. The maximum recommended is 7.</p>
             </div>
-            <p><i className="fas fa-flask fa-lg"></i>   You can then save your newly created medicines in the medicine cabinet for future usage</p>
-            <p><i className="fas fa-exclamation-circle fa-lg"></i><strong>IMPORTANT :</strong> Please make sure you follow the dosage restrictions in the herb's materia medica entry.</p>
+            <div className="icon-group">
+              <i className="fas fa-flask fa-lg"></i>   
+              <p>You can then save your newly created medicines in the medicine cabinet for future usage</p>
+            </div>
+            <div className="icon-group">
+              <i className="fas fa-exclamation-circle fa-lg"></i>
+              <p><strong>IMPORTANT :</strong> Please make sure you follow the dosage restrictions in the herb's materia medica entry.</p>
+            </div>
           </div>
           <br />
 
