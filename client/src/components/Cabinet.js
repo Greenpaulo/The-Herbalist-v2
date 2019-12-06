@@ -45,15 +45,6 @@ class Cabinet extends Component {
               <span className="prescription-heading">Patient Name:</span>{medicine.patientName}
             </h3>
 
-            {/* <div id="herbs-dosages">
-              <div>
-                {this.renderHerbs(medicine)}
-              </div>
-              <div>
-                {this.renderDosages(medicine)}
-              </div>
-            </div> */}
-
             <table id="prescription-table" className="my-1">
               <thead>
                 <tr>

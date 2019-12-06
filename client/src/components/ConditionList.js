@@ -32,7 +32,6 @@ class ConditionList extends Component {
     })
   }
 
-
   render() {
     return (
       <Fragment>

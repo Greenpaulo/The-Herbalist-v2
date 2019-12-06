@@ -51,7 +51,6 @@ class Dispensary extends Component {
           </div>
           <br />
 
-
           <p className="medium animated fadeIn delay-custom2">Tips For Prescribing</p>
 
           <div className="card animated fadeIn delay-custom2" id="card-two">
@@ -200,7 +199,6 @@ class Dispensary extends Component {
 const FormikDispensary = withFormik({
   mapPropsToValues({ patientName, notes, herb1, herb2, herb3, herb4, herb5, herb6, herb7, dosage1, dosage2, dosage3, dosage4, dosage5, dosage6, dosage7 }) {
     return {
-      // TODO - later here when we implement edit functionality, we can fetch an existing Rx from the DB and then use mapStateToProps to put the info in the prop. Then we use mapPropsToValues to take fill the form.
       patientName: patientName || '',
       herb1: herb1 || '',
       herb2: herb2 || '',
