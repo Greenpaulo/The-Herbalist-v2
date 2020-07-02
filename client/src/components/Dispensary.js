@@ -29,7 +29,6 @@ class Dispensary extends Component {
   render() {
     return (
       <Fragment>
-
         <section className="container" id="dispensary">
           <h1 className="x-large text-primary animated fadeInDown">Dispensary</h1>
 

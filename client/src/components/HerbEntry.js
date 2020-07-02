@@ -6,8 +6,6 @@ import uuid from 'uuid';
 class HerbEntry extends Component {
   componentDidMount = () => {
     window.scrollTo(0, 0);
-    // this.props.fetchHerb(this.props.match.params.herb)
-    // this.props.fetchHerbList();
   }
 
   renderActionsIndications = () => {
@@ -143,18 +141,6 @@ class HerbEntry extends Component {
     })
   }
 
-  // renderSection = (section) => {
-  //   const { currentHerb } = this.props;
-  //   if (currentHerb[section] !== null &&
-  //     currentHerb[section] !== undefined) {
-  //     return (
-  //       <div>
-  //         <h3>{section}:</h3>
-  //       </div>
-  //     )
-  //   }
-  // }
-
   renderHerbSelect = () => {
     if (this.props.herbList !== null && this.props.herbList !== undefined) {
       return this.props.herbList.map(herb => {
@@ -164,16 +150,6 @@ class HerbEntry extends Component {
       })
     }
   }
-
-  // onHerbSelect = (e) => {
-  //   console.log(e.target.value.replace(/ /g, "_"));
-
-  //   this.props.fetchHerbByLatin(e.target.value.replace(/ /g, "_"))
-
-  // }
-
-
-
 
   render() {
     const { currentHerb } = this.props;
@@ -207,8 +183,6 @@ class HerbEntry extends Component {
               <h3>Dosage</h3>
               <p>{currentHerb.dosage}</p>
             </div>
-
-            {/* {this.renderSection('dosage')} */}
 
             {this.renderBotanicalDescription()}
 
