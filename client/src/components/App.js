@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux';
-import '../css/style.css'
+import '../css/style.min.css'
 
 import Navbar from './Navbar';
 import HowToUse from './HowToUse';
