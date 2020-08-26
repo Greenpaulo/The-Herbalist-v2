@@ -19,7 +19,7 @@ const path = require('path');
 const app = express();
 
 // Connect mongoose to MongoDB
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useFindAndModify: false })
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
 
 // Wiring up express to use cookies, with the help of cookie-session middleware.
 app.use(cookieSession({
