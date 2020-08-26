@@ -37,7 +37,7 @@ class About extends React.Component {
             </div>
             <div className="list-group">
               <i className="fab fa-github fa-2x"></i>
-              <a href='https://github.com/Greenpaulo' target="_blank" className="lead contact-info">https://github.com/Greenpaulo</a>
+              <a href='https://github.com/Greenpaulo' target="_blank" rel="noopener noreferrer" className="lead contact-info">https://github.com/Greenpaulo</a>
             </div>
           </div>
         </div>
