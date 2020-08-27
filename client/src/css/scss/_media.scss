@@ -107,11 +107,21 @@
   #sign-up h1 {
     font-size: 2.5rem;
   }
-
-  
 }
   
-
+// Ipad
+@media (max-width: 768px){
+  // Landing
+  .pimg1 {
+    background-image: url('../images/pimg1-768.jpeg');
+  }
+  .pimg2 {
+    background-image: url('../images/pimg2-768.jpeg');
+  }
+  .pimg3 {
+    background-image: url('../images/pimg3-768.jpeg');
+  }
+}
 
 
 
