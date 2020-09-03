@@ -13,20 +13,6 @@ class Login extends Component {
     }, 2000)
   }
 
-  // onLockClick = () => {
-  //   console.log('clicked');
-  //   // Animate the lock
-  //   // const lock = document.querySelector('#lock');
-  //   // lock.classList.remove('animated', 'shake');
-  //   // this.setState({ lockClicked: !this.state.lockClicked })
-  //   // setTimeout(() => {
-  //   //   lock.classList.add('animated', 'shake');
-  //   //   this.setState({ lockClicked: !this.state.lockClicked })
-  //   //   console.log(this.state)
-  // }, 1000);
-
-  // }
-
   render() {
     return (
       <div className="container" id="sign-up">
@@ -36,7 +22,6 @@ class Login extends Component {
         </div>
         <a className="btn btn-primary shadow" id="sign-up-btn" href="/auth/google">Sign Up with Google</a>
         <p className="lead">Already have an account? <a className="text-primary animated-link" href="/auth/google" id="login-link">Login</a></p>
-
       </div>
     )
   }
