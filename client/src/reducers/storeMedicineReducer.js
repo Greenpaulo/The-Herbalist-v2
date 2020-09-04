@@ -1,6 +1,6 @@
 import { STORE_MEDICINE } from '../actions/types';
 
-const intialState = {
+const initialState = {
   user: '',
   patientName: '',
   date: '',
@@ -14,10 +14,9 @@ const intialState = {
     { name: '', dosage: '' },
   ],
   notes: ''
-
 }
 
-export default function (state = intialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case STORE_MEDICINE:
       return action.payload;
