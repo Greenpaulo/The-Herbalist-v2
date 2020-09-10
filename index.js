@@ -5,6 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 const authRoutes = require('./routes/authRoutes');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 require('./models/Conditions');
 require('./models/Herbs');
 require('./models/Medicine');
@@ -20,6 +21,9 @@ const app = express();
 
 // Connect mongoose to MongoDB
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
+
+// Added helmet middleware to secure http headers
+app.use(helmet());
 
 // Wiring up express to use cookies, with the help of cookie-session middleware.
 app.use(cookieSession({
