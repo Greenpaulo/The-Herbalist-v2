@@ -22,8 +22,17 @@ const app = express();
 // Connect mongoose to MongoDB
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
 
-// Added helmet middleware to secure http headers
-app.use(helmet());
+// Added helmet middleware options to secure http headers
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.xssFilter());
 
 // Wiring up express to use cookies, with the help of cookie-session middleware.
 app.use(cookieSession({
